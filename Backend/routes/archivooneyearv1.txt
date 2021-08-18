@@ -1,0 +1,251 @@
+function oneyear(req, granularidad, res){
+
+    class OneYear {
+        constructor(identificador) {
+          this.identificador = identificador;
+          this.min_interval = -1;
+          this.max_interval = -1;
+          this.insertar = false;
+        }
+    }
+
+
+    var campoGranularidad = req.body.campoGranularidad 
+    var id_indicador = req.body.id_indicador
+    var path = './uploads/' + req.files[0].filename
+
+    var anyounico = req.body.anyo_solo
+
+
+    let insert_query = `insert into archivo(nombre) values($1) RETURNING id`
+
+
+    client.query(insert_query,[req.files[0].filename],(err2,result2)=>{
+        if (err2) {
+           
+            return res.status(400).json({
+                ok: false,
+                msg: "Error en la base de datos."
+            });
+        }else{
+            var id_archivo = result2.rows[0].id 
+
+            let insert_archivo_indicador =
+            `
+            INSERT INTO indicadorarchivo values($1,$2)
+            `
+
+            client.query(insert_archivo_indicador, [id_indicador,id_archivo],(errF, resultF)=>{
+                if(errF){
+                    return res.status(400).json({
+                        ok: false,
+                        msg: "Error en la base de datos."
+                    });
+                }else{
+                    var separator2 = "";
+                    let fsStream = fs.createReadStream(path);
+                    let csvStream = csv({})
+                    fsStream.pipe(csvStream)
+                    .on('headers', (headers) => {
+                        let headers_string = String(headers)
+        
+                        if (headers_string.includes(";")){
+                            separator2 = ";"
+                        }else if(headers_string.includes(",")){
+                            separator2 = ","
+                        }else if(headers_string.includes("\t")){
+                            separator2 = "\t"
+                        }else if(headers_string.includes(".")){
+                            separator2 = "."
+                        }
+        
+                        fsStream.unpipe(csvStream);
+                        csvStream.end();
+                        fsStream.destroy();    
+        
+                    })
+                    setTimeout(readFile, 50);
+        
+                    async function readFile(){
+                        const setGranularidades = new Set();
+                        const mapaGranularidades= new Map();
+                        var errorMessage;
+                        var FileCleanFlag = true;
+        
+                        let csvstream = fastcsv.parseFile(path, { headers: true, delimiter: separator2, ignoreEmpty: true})
+        
+                        .on("headers", function(headers){
+                            
+                            if(!headers.includes(campoGranularidad)){
+                                
+                                
+                               
+                                errorMessage = 'El nombre del campo de granularidad no está en el archivo.'
+                                unlinkDocument(path,id_archivo)
+                                res.status(400).json(errorMessage)
+                                
+                                FileCleanFlag = false;
+                                
+                     
+                            }
+        
+                            
+                            
+                        })
+        
+                        .on("data", async function (data) {
+                            if (!FileCleanFlag) { return; }
+        
+                            csvstream.pause();
+        
+                            let dato_granularidad = data[campoGranularidad]
+        
+                            var identificador;
+        
+                            if(!setGranularidades.has(dato_granularidad)){
+                                setGranularidades.add(dato_granularidad)
+        
+                                let select_query;
+                                if(granularidad == 1){
+                                    select_query = 
+                                        `
+                                        select *, similarity(nombre, $1) as similaridad
+                                        from region
+                                        order by similaridad desc
+                                        limit 1
+                                                    
+                                        
+                                        `
+                                }else if(granularidad == 2){
+                                    select_query = 
+                                        `
+                                        select *, similarity(nombre, $1) as similaridad
+                                        from provincia
+                                        order by similaridad desc
+                                        limit 1
+                                                    
+                                        
+                                        `
+                                }else if(granularidad == 3){
+                                    select_query = 
+                                        `
+                                        select *, similarity(nombre, $1) as similaridad
+                                        from comuna
+                                        order by similaridad desc
+                                        limit 1
+                                                    
+                                        
+                                        `
+                                }
+                                var rows;
+        
+                                try{
+                                    rows = await client.query(select_query,[dato_granularidad])
+                                }catch(err){
+                                    
+                                    errorMessage = 'Error en la base de datos.'
+                                    unlinkDocument(path,id_archivo)
+                                    res.status(400).json(errorMessage)
+                                    //res.status(400).send(errorMessage)
+                                    
+                                    
+                                    
+                                }
+        
+                                identificador = rows.rows[0].cod 
+                                similaridad = rows.rows[0].similaridad
+        
+                                if(similaridad < 0.2 ){
+                                    errorMessage = 'Los nombres de la granularidad del archivo no son parecidos con ninguno de la base de datos.'
+                                    res.status(400).json(errorMessage)
+                                }else{
+                                    let new_intervalo = new OneYear(identificador)
+                                    mapaGranularidades.set(dato_granularidad,new_intervalo);
+                                }
+        
+                                let select_query_intervalo = 
+                                    `
+                                        SELECT *
+                                        FROM indicadorobtencionfecha
+                                        WHERE id_indicador = $1 and id_zona = $2 and interval = FALSE and fecha_inicio = $3
+                                    `
+                                client.query(select_query_intervalo, [id_indicador, identificador, anyounico],(err2,result2)=>{
+                                    if(err2){
+                                        csvstream.resume()
+                                        errorMessage = 'Error en la base de datos'
+                                        return res.status(400).send(errorMessage)
+                                    }else{
+        
+                                        if(result2.rows.length == 0){
+                                            mapaGranularidades.get(dato_granularidad).min_interval = anyounico
+                                            mapaGranularidades.get(dato_granularidad).max_interval = anyounico
+                                            mapaGranularidades.get(dato_granularidad).insertar = true
+                                            csvstream.resume()
+                                        }
+        
+                                        
+                                    }
+                                })
+                                
+        
+        
+                            }else{
+                                csvstream.resume()
+                            }
+        
+        
+        
+                        })
+        
+                        .on("end", async function () {
+                           
+                           
+        
+                           for(let [key,value] of mapaGranularidades){
+                               let identificador = value.identificador
+                               let insertar = value.insertar
+                               let min_interval = parseInt(value.min_interval)
+                               let max_interval = parseInt(value.max_interval)
+                               
+                               if(insertar == true){
+                                   let insert_query = 
+                                   `
+                                   INSERT INTO indicadorobtencionfecha VALUES($1,$2,$3,$4,FALSE)
+                                   `
+        
+        
+                                   var rows;
+        
+                                   try{
+                                        rows = await client.query(insert_query, [id_indicador, identificador, min_interval, max_interval])
+                                   }catch(error){
+                                        
+                                        errorMessage = 'Error en la base de datos.'
+                                        unlinkDocument(path,id_archivo)
+                                        res.status(400).json(errorMessage)
+                                   }
+                               }
+                           }
+                           
+                           return res.json({
+                            ok: true
+                            });
+                        })
+        
+                        
+        
+        
+        
+        
+                    }
+        
+                }
+
+            })
+
+
+
+
+        }
+    })
+}   

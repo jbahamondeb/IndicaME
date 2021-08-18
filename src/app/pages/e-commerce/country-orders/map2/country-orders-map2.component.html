@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-xxl-12">
+    <nb-card>
+      <nb-card-body>
+    
+        
+          <nb-form-field>
+         
+            <label for="categoria" class="label">Seleccione Categoría.</label>
+      
+              <nb-select id="categoria" [(selected)]="selectedCategoria" placeholder="Seleccione Categoría" (selectedChange)="onChange($event)">
+                 <nb-option *ngFor="let categoria of categorias" [value]="categoria.id_categoria">{{categoria.nombre}}</nb-option> 
+              </nb-select>
+         
+      
+      
+      
+          </nb-form-field>
+          
+          
+        
+          
+    
+        
+    
+        <div class="wrapper">
+    
+          <div class="medio">
+            <nb-accordion>
+              <nb-accordion-item>
+                <nb-accordion-item-header>
+                  Intervalos
+                </nb-accordion-item-header>
+                <nb-accordion-item-body>
+                  <ng-container *ngFor="let texto of textos">
+                    <div class="coloreado">
+                      <svg width="30px" height="20px">
+                        <rect width="30px" height="20px" [ngStyle]="{'fill': texto.color}" style="stroke-width:3;stroke:rgb(0,0,0)" />
+                      </svg>
+                      <span>{{texto.texto}}</span>
+                    </div>
+                  </ng-container>  
+                </nb-accordion-item-body>
+              </nb-accordion-item>
+            </nb-accordion>
+            <div id="mapa2" class="map">
+        
+            </div>
+          </div>
+    
+          <div class="medio">
+            
+            <div id="mapaNuevo" class="map">
+        
+            </div>
+          </div>
+    
+      
+        </div>
+        
+        
+      </nb-card-body>
+      
+    
+    </nb-card>
+   </div> 
+</div>
+
+
+
+  
+  
+
+
+

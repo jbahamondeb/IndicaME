@@ -1,0 +1,98 @@
+[
+  {
+    "nombre": "Región de Arica y Parinacota",
+    "id": 15,
+    "latitud": -18.5075,
+    "longitud": -69.6451
+  },
+  {
+    "nombre": "Región de Tarapacá",
+    "id": "01",
+    "latitud": -20.164,
+    "longitud": -69.5541
+  },
+  {
+    "nombre": "Región de Antofagasta",
+    "id": "02",
+    "latitud": -23.7503,
+    "longitud": -69.6
+  },
+  {
+    "nombre": "Región de Magallanes y Antártica Chilena",
+    "id": 12,
+    "latitud": -54.3551,
+    "longitud": -70.5284
+  },
+  {
+    "nombre": "Región de Aysén del Gral.Ibañez del Campo",
+    "id": 11,
+    "latitud": -46.2772,
+    "longitud": -73.6628
+  },
+  {
+    "nombre": "Región de Atacama",
+    "id": "03",
+    "latitud": -27.5276,
+    "longitud": -70.2494
+  },
+  {
+    "nombre": "Región de Coquimbo",
+    "id": "04",
+    "latitud": -30.8301,
+    "longitud": -70.9816
+  },
+  {
+    "nombre": "Región de Valparaíso",
+    "id": "05",
+    "latitud": -32.9039,
+    "longitud": -71.0262
+  },
+  {
+    "nombre": "Región Metropolitana de Santiago",
+    "id": 13,
+    "latitud": -33.4417,
+    "longitud": -70.6541
+  },
+  {
+    "nombre": "Región de Los Lagos",
+    "id": 10,
+    "latitud": -42.1071,
+    "longitud": -72.6425
+  },
+  {
+    "nombre": "Región de Los Ríos",
+    "id": 14,
+    "latitud": -39.9086,
+    "longitud": -72.7034
+  },
+  {
+    "nombre": "Región de La Araucanía",
+    "id": "09",
+    "latitud": -38.5505,
+    "longitud": -72.4382
+  },
+  {
+    "nombre": "Región del Bío-Bío",
+    "id": "08",
+    "latitud": -37.2442,
+    "longitud": -72.4661
+  },
+  {
+    "nombre": "Región de Ñuble",
+    "id": 16,
+    "latitud": -36.7225743,
+    "longitud": -71.7622481
+  },
+  {
+    "nombre": "Región del Maule",
+    "id": "07",
+    "latitud": -35.5892,
+    "longitud": -71.5007
+  },
+  {
+    "nombre": "Región del Libertador Bernardo O'Higgins",
+    "id": "06",
+    "latitud": -34.4294,
+    "longitud": -71.0393
+  }
+]

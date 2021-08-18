@@ -1,0 +1,32 @@
+{
+  "name": "SQL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.0",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "csv-string": "^4.0.1",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "express-promise-router": "^4.1.0",
+    "fast-csv": "^4.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.6.2",
+    "path": "^0.12.7",
+    "pg": "^8.2.1",
+    "pg-format": "^1.0.4",
+    "require-stack": "^1.0.2"
+  }
+}

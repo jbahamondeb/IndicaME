@@ -1,0 +1,93 @@
+@import '../../../@theme/styles/styles';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+
+  @include media-breakpoint-down(sm) {
+
+    .paginacion{
+      text-align: left;
+    }
+    
+    ::placeholder{
+        font-size: 10px
+    }
+
+    h5{
+      font-size: 16px;
+    }
+
+    h6{
+      font-size: 14px;
+    }
+
+    
+
+    
+
+
+    
+  }
+
+  @include media-breakpoint-down(xs) {
+
+    h5{
+      font-size: 14px;
+    }
+
+    h6{
+      font-size: 12px;
+    }
+  }
+}
+
+.mismalinea{
+  display: inline;
+}
+
+.buscadores1{
+
+  display: inline-block;
+  padding: 1.5%;
+}
+.buscadores{
+  display: inline-block;
+  padding: 1.5%;
+}
+
+
+
+
+.paginacion{
+    text-align: center; 
+    margin-top: 5%;
+  
+  
+  }
+  
+
+  .aranya2{
+    display: inline-block;
+  }
+
+.aranya2 button{
+    cursor:alias !important;
+  }
+  
+  .aranya2 .especial button:hover {
+    background-color: transparent !important;
+  }
+  
+
+  .sameline h6{
+    float: left;
+  
+  }
+
+  .titulo{
+    float:left
+  }
+  .titulo h5{
+    word-break: break-all;
+  }

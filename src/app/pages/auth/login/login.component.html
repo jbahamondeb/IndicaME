@@ -1,0 +1,117 @@
+<ng-container *ngIf="dialog">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-header style="text-align: center;">
+                    Iniciar Sesión
+                </nb-card-header>
+                
+                <nb-card-body>
+                    <nb-form-field>
+                        <form [formGroup]="firstFormGroup" autocomplete="off">
+                            
+                            <label for="inputCorreo"  class="label">Correo electrónico</label>
+                            <br>
+                            <div class="input-box">
+                                <nb-icon style="margin-right: 3%;" icon="email-outline" pack="eva">
+    
+                                </nb-icon>
+                                <input type="text" nbInput fullWidth placeholder="Correo" formControlName="correo" id = "inputCorreo">
+                            </div>
+                            <br>
+                            <label for="inputPass"  class="label">Contraseña</label>
+                            <br>
+                            <div class="input-box">
+                                <nb-icon style="margin-right: 3%;" icon="lock-outline" pack="eva">
+    
+                                </nb-icon>
+                                
+                                
+                                    <input [type]="getInputType()" nbInput  placeholder="Contraseña" formControlName="pass" id = "inputPass">
+                                    <button nbSuffix nbButton ghost (click)="toggleShowPassword()" >
+                                        <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+                                                pack="eva"
+                                                [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                        </nb-icon>
+                                    </button>
+                                
+                                
+    
+    
+    
+                            </div>
+                            <div class="aranya" style="text-align: center;">
+                                <button ghost nbButton (click)="openRecovery()">
+                                
+                                    Olvide mi contraseña
+                                  </button>
+                            </div>
+                            
+                            <div class="captcha">
+                                <ngx-recaptcha2 
+                                
+                                (success)="handleSuccess($event)"
+                                (expire)="handleExpire()"
+                                [siteKey]="siteKey"
+                                [size]="size"
+                                formControlName="recaptcha" >
+                                </ngx-recaptcha2>
+                            </div>
+    
+                            
+                            <br>
+                            <div style="text-align: center;">
+    
+                                <button nbButton status="success" (click)="checkLogin()">
+                                    
+                                    
+                                    <nb-icon icon="power-outline" pack="eva">
+    
+                                    </nb-icon>
+    
+                                    Ingresar
+                                </button>
+    
+                                <ng-container *ngIf="!canPressButton;else other">
+                                    <p class="caption status-danger">
+                                        Debes completar la verificación.
+                                    </p>
+                                </ng-container>
+    
+                                <ng-template #other>
+                                    <br>
+                                    <br>
+                                </ng-template>
+                                
+                                
+                                <span>¿Quieres formar parte del proyecto y no tienes una cuenta?</span>
+                                <br>
+                                
+                                <a>
+                                    <div class="aranya">
+                                        <button ghost nbButton (click)="openRegister()">
+                                        
+                                            Solicita el registro aquí
+                                          </button>
+                                    </div>
+                                    
+    
+                                      
+                                </a>
+    
+                                
+                               
+                            </div>
+                           
+                            
+                            
+                            
+                        </form>
+                    </nb-form-field>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+    
+</ng-container>
+

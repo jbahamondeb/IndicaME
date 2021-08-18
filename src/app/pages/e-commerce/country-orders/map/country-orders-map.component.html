@@ -1,0 +1,204 @@
+
+
+<!--<div leaflet [leafletOptions]="options" [leafletLayers]="layers" (leafletMapReady)="mapReady($event)">
+
+    
+</div>
+
+-->
+
+
+
+    
+
+    
+        <div id="mapa" class="map" *ngIf="showRegiones">
+            <input
+                [ngModel]="value"
+                (ngModelChange)="onModelChange($event)"
+                nbInput
+                type="text"
+                placeholder="Busca una región"
+                [nbAutocomplete]="autoNgModel"/>
+        
+        
+                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                        {{ option }}
+                    </nb-option>
+                </nb-autocomplete>
+        
+        
+            
+                <button nbButton ghost (click)="toggleShowLayer()">
+                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                        pack="eva"
+                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                    >
+                    </nb-icon>
+                </button>
+            
+            
+        </div>
+        
+        <div id="mapa2v2" class="map" *ngIf="showProvincias">
+            <input
+                [ngModel]="value"
+                (ngModelChange)="onModelChange($event)"
+                nbInput
+                type="text"
+                placeholder="Busca una provincia"
+                [nbAutocomplete]="autoNgModel"/>
+        
+        
+                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                        {{ option }}
+                    </nb-option>
+                </nb-autocomplete>
+        
+        
+            
+                <button nbButton ghost (click)="toggleShowLayer()">
+                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                        pack="eva"
+                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                    >
+                    </nb-icon>
+                </button>
+            
+            
+        </div>
+        
+        <div id="mapa3" class="map" *ngIf="showComunas">
+            <input
+                [ngModel]="value"
+                (ngModelChange)="onModelChange($event)"
+                nbInput
+                type="text"
+                placeholder="Busca una comuna"
+                [nbAutocomplete]="autoNgModel"/>
+        
+        
+                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                        {{ option }}
+                    </nb-option>
+                </nb-autocomplete>
+        
+        
+            
+                <button nbButton ghost (click)="toggleShowLayer()">
+                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                        pack="eva"
+                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                    >
+                    </nb-icon>
+                </button>
+            
+            
+        </div>
+
+
+
+<!--
+<ng-container *ngIf="seleccionado === 'Regiones'">
+    <div id="mapa" class="map">
+        <input
+            [ngModel]="value"
+            (ngModelChange)="onModelChange($event)"
+            nbInput
+            type="text"
+            placeholder="Busca una región"
+            [nbAutocomplete]="autoNgModel"/>
+    
+    
+            <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+            </nb-autocomplete>
+    
+    
+        
+            <button nbButton ghost (click)="toggleShowLayer()">
+                <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                    pack="eva"
+                    [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                   >
+                </nb-icon>
+            </button>
+        
+        
+    </div>
+</ng-container>
+-->
+<!--
+<ng-container *ngIf="seleccionado === 'Provincias'">
+    <div id="mapa2v2" class="map">
+        <input
+            [ngModel]="value"
+            (ngModelChange)="onModelChange($event)"
+            nbInput
+            type="text"
+            placeholder="Busca una provincia"
+            [nbAutocomplete]="autoNgModel"/>
+    
+    
+            <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+            </nb-autocomplete>
+    
+    
+        
+            <button nbButton ghost (click)="toggleShowLayer()">
+                <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                    pack="eva"
+                    [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                   >
+                </nb-icon>
+            </button>
+        
+        
+    </div>
+</ng-container>
+
+-->
+
+<!--
+
+<ng-container *ngIf="seleccionado === 'Comunas'">
+
+    <div id="mapa3" class="map">
+        <input
+            [ngModel]="value"
+            (ngModelChange)="onModelChange($event)"
+            nbInput
+            type="text"
+            placeholder="Busca una comuna"
+            [nbAutocomplete]="autoNgModel"/>
+    
+    
+            <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                    {{ option }}
+                  </nb-option>
+            </nb-autocomplete>
+    
+    
+        
+            <button nbButton ghost (click)="toggleShowLayer()">
+                <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                    pack="eva"
+                    [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                   >
+                </nb-icon>
+            </button>
+        
+        
+    </div>
+</ng-container>
+
+-->

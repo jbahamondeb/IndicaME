@@ -1,0 +1,207 @@
+<div class="row" >
+    <div class="col-xxl-12" >
+        <nb-card >
+            <nb-card-header>Buscar Documento Fuente por filtros</nb-card-header>
+
+            <ng-container *ngIf="!filtros">
+                <nb-card-body style="padding-top:0px;padding-bottom:1px;">
+
+                    <div style="text-align: center">
+                        <!--<p style="margin-bottom: 0px;"> Filtrar </p>-->
+                        <button nbButton ghost status="primary" style="padding: 0px" (click)="filterornot()"><nb-icon icon="arrow-down-outline" pack="eva"></nb-icon></button>
+                    </div>
+                   
+                    <!--
+                    <nb-accordion>
+                       <nb-accordion-item>
+                        <nb-accordion-item-header (click)="filterornot()">
+                            Filtrar
+                        </nb-accordion-item-header>
+                       </nb-accordion-item> 
+                        
+                    </nb-accordion> 
+                    -->
+                </nb-card-body>
+            </ng-container>
+            
+            
+        </nb-card>
+        
+    </div>
+</div>
+
+<ng-container *ngIf="filtros">
+    <div class="row" >
+        <div class="col-lg-6" >
+            <nb-card>
+                <nb-card-body>
+    
+                   
+                    
+                        <nb-accordion>
+    
+                            <nb-accordion-item>
+                                <nb-accordion-item-header>
+                                    Categoria aportada
+                                </nb-accordion-item-header>
+        
+                                <nb-accordion-item-body>
+                                   
+                                    <ng-container *ngFor="let categoria of categorias">
+                                        <nb-checkbox (change)="filtrar($event, categoria.id_categoria, 'categoria')">{{categoria.nombre}}</nb-checkbox>
+                                    </ng-container> 
+                                </nb-accordion-item-body>
+                            </nb-accordion-item>
+        
+                            <nb-accordion-item>
+                                <nb-accordion-item-header>
+                                    Servicios Fuentes
+                                </nb-accordion-item-header>
+                                <nb-accordion-item-body>
+                                    <ng-container *ngFor="let servicio of servicios">
+                                        <nb-checkbox (change)="filtrar($event, servicio.id_servicio, 'servicio')">{{servicio.institucion}}</nb-checkbox>
+                                    </ng-container>
+                                    
+        
+                                </nb-accordion-item-body>
+                            </nb-accordion-item>
+        
+                        </nb-accordion>
+                   
+                    
+                </nb-card-body>
+            </nb-card>
+        </div>
+
+        <div class="col-lg-6">
+           <nb-card>
+               <nb-card-body>
+                   <nb-accordion>
+                       <nb-accordion-item>
+                           <nb-accordion-item-header>
+                               Formato del Documento
+                           </nb-accordion-item-header>
+
+                           <nb-accordion-item-body>
+                               <ng-container *ngFor="let formato of formatos">
+                                <nb-checkbox (change)="filtrar($event, formato.id_formato, 'formato')">{{formato.formato}}</nb-checkbox>
+                               </ng-container>
+                           </nb-accordion-item-body>
+                       </nb-accordion-item>
+                   </nb-accordion>
+               </nb-card-body>
+           </nb-card> 
+        </div>
+
+        
+        
+
+    </div>
+
+    
+    
+    
+</ng-container>
+
+
+
+<ng-container *ngIf="filtros">
+
+
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-body>
+                    <button nbButton nbSuffix status="primary" (click)="buscarPorFiltros()"><nb-icon icon="search-outline" ></nb-icon>Buscar</button>
+                </nb-card-body>
+            </nb-card>
+        </div>
+
+        
+    </div>
+
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                
+                <div style="text-align: center">
+                    <!--<p style="margin-bottom: 0px;"> Filtrar </p>-->
+                    <button nbButton ghost status="primary" style="padding: 0px" (click)="filterornot()"><nb-icon icon="arrow-up-outline" pack="eva"></nb-icon></button>
+                </div>
+    
+                
+            </nb-card>
+            
+        </div>
+    </div>
+
+    
+</ng-container>
+
+<ng-container *ngIf="documento?.length>0">
+    <div class="row">
+        <div class="col-xxl-12">
+    
+            <nb-card>
+                <nb-card-body>
+                    <nb-accordion>
+                        <nb-accordion-item *ngFor="let documento of documento | paginate: {itemsPerPage: 10, currentPage: p}" >
+                            <nb-accordion-item-header (click)="openDocument(documento.id_documento)">
+                                <div class="titulo">
+                                    <h5>{{documento.nombre}}</h5>
+                                </div>
+                            </nb-accordion-item-header>
+    
+                            <nb-accordion-item-body >
+                                
+                                <h6>Categorias Aportadas</h6>
+    
+                                <nb-list>
+                                    <nb-list-item *ngFor="let categoria of categoria_aportada">
+                                        <nb-icon icon="checkmark-square-outline" pack="eva"></nb-icon>
+                                        {{categoria.nombre}}
+                                    </nb-list-item>
+                                </nb-list>
+    
+                                <br>
+                                <h6>Servicios Fuentes</h6>
+    
+                                <nb-list>
+                                        
+                                    <nb-list-item *ngFor="let servicio of servicios_indicador">
+                                        <nb-icon icon="book-outline" pack="eva"></nb-icon>
+                                        {{servicio.institucion}}
+                                    </nb-list-item>
+                                </nb-list>
+
+                                <div class="sameline">
+                                    <h6>URL de obtención: &nbsp;</h6>  <a href="{{documento.url}}" target="_blank"> {{ documento.url}}</a> 
+                                </div>
+                                
+                                <br>
+                                <h6>Formatos del Documento </h6>
+                                <nb-list>
+                                    <nb-list-item *ngFor="let formato of formatos_documento">
+                                        <nb-icon icon="pricetags-outline" pack="eva"></nb-icon>
+                                        .{{formato.formato}}
+                                    </nb-list-item>
+                                </nb-list>
+                            </nb-accordion-item-body>
+                        </nb-accordion-item>
+                        
+                    </nb-accordion>
+                    <ng-container *ngIf="documento?.length>10">
+                        
+                            <div class="paginacion">
+                                <pagination-controls (pageChange)="p=$event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+                            </div>
+                        
+                        
+                    </ng-container>
+                    
+                    
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</ng-container>

@@ -1,0 +1,26 @@
+
+
+::ng-deep .header{
+
+    width: 80vw !important;
+    margin-top: 1% !important;
+    margin-left:1% !important;
+    margin-right: 1% important;
+    padding: 2% !important;
+}
+
+::ng-deep .header .label{
+    
+    //width: max-content;
+    //width: 80% !important;
+}
+
+::ng-deep .cdk-global-scrollblock {
+    position: static !important;
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 2%;
+}

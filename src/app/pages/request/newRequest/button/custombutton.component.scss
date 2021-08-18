@@ -1,0 +1,28 @@
+.botones button{
+    margin-bottom: 10%;
+}
+
+.botones .aceptar button{
+    background-color: green;
+    color: white;
+
+}
+
+.botones .aceptar button:hover{
+    background-color: rgb(0, 61, 0);
+    color: white;
+    
+}
+
+
+.botones .rechazar button{
+    background-color: red;
+    color: white;
+
+}
+
+.botones .rechazar button:hover{
+    background-color: rgb(175, 2, 2);
+    color: white;
+    
+}

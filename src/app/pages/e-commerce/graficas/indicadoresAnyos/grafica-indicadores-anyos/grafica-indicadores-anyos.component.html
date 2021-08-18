@@ -1,0 +1,13 @@
+<nb-card>
+    <nb-card-header>N° de indicadores totales por año</nb-card-header>
+    
+    <nb-card-body>
+        <div class="container">
+            <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="opcionesSlider"></ngx-slider>
+            <button nbButton status="primary" (click)="filterByYears()"><nb-icon icon="search-outline" ></nb-icon>Filtrar</button>
+        </div>
+        
+        <div echarts [options]="options" class="echart" (chartInit)="onChartInit($event)"></div>
+    </nb-card-body>
+</nb-card>
+

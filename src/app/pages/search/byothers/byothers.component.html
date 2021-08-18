@@ -1,0 +1,345 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Búsqueda de indicadores por otros filtros.</nb-card-header>
+            <nb-card-body>
+                <nb-form-field>
+                    <label for="inputNombre"  class="label">Selecciona el tipo de búsqueda</label>
+                    <nb-select id = "inputNombre" [(selected)]="selectedFiltro" (selectedChange)="filtroSeleccionado($event)">
+                                    
+                        <nb-option value="{{filtro.id}}" *ngFor="let filtro of filtros">{{filtro.texto}}</nb-option>
+
+                    </nb-select>
+
+                </nb-form-field>
+                
+                <ng-container *ngIf="id_seleccionada == 1">
+                    <div class="buscadores1">
+                         <label for="inputPeriod"  class="label">Selecciona el período de búsqueda</label>
+                         <nb-select id="inputPeriod" [(selected)]="selectedPeriod" (selectedChange)="periodoSeleccionated($event)">
+                                     
+                             <nb-option value="{{periodo.id}}" *ngFor="let periodo of periodos">{{periodo.texto}}</nb-option>
+                    
+                         </nb-select>
+                    </div>
+                    
+                    <div class="buscadores">
+                         <label for="orden"  class="label">Selecciona el tipo de orden</label>
+                         <nb-select id="orden" [(selected)]="selectedOrder" (selectedChange)="orderSelectionated($event)">
+                                     
+                             <nb-option value="{{order.id}}" *ngFor="let order of orders">{{order.texto}}</nb-option>
+         
+                         </nb-select>
+
+
+
+                    </div>
+                     
+
+
+                    
+                </ng-container> 
+ 
+                <ng-container *ngIf="id_seleccionada == 2">
+                    <div class="buscadores2" style="margin: 2%">
+                        <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="opcionesSlider"></ngx-slider>
+                        <button nbButton status="primary" (click)="filterByYears()"><nb-icon icon="search-outline" ></nb-icon>Buscar</button>
+                    </div>
+                     
+                </ng-container>
+ 
+                <ng-container *ngIf="id_seleccionada == 3">
+                    <div class="buscadores1">
+
+                        <label for="inputPeriod2"  class="label">Selecciona el período de búsqueda</label>
+                         <nb-select id="inputPeriod2" [(selected)]="selectedPeriod2" (selectedChange)="periodoSeleccionated2($event)">
+                                     
+                             <nb-option value="{{periodo.id}}" *ngFor="let periodo of periodos">{{periodo.texto}}</nb-option>
+         
+                         </nb-select>
+                    </div>
+                    <div class="buscadores">
+                        <label for="orden2"  class="label">Selecciona el tipo de orden</label>
+                        <nb-select id="orden2" [(selected)]="selectedOrder2" (selectedChange)="orderSelectionated2($event)">
+                                    
+                            <nb-option value="{{order.id}}" *ngFor="let order of orders">{{order.texto}}</nb-option>
+        
+                        </nb-select>
+
+                        
+                    </div>
+                    
+
+                 </ng-container>
+ 
+                 <ng-container *ngIf="id_seleccionada == 4">
+                     <div class="buscadores">
+                        <label for="orden3"  class="label">Selecciona el tipo de orden</label>
+                        <nb-select id="orden3" [(selected)]="selectedOrder3" (selectedChange)="orderSelectionated3($event)">
+                                    
+                            <nb-option value="{{order.id}}" *ngFor="let order of orders">{{order.texto}}</nb-option>
+        
+                        </nb-select>
+
+                     </div>
+                    
+                </ng-container>
+                
+            </nb-card-body>
+        </nb-card>
+
+       
+    </div>
+</div>
+
+<ng-container *ngIf="indicadoresEncontrados?.length>0">
+    <div class="row">
+
+            <div class="col-xxl-12">
+                <nb-card>
+                    <nb-card-header>Indicadores encontrados.
+
+
+                    </nb-card-header>
+                    <nb-card-body>
+                        <ng-container *ngIf="mensaje">
+                            <b>No se encontró ningún indicador en el rango de búsqueda. Los resultados son los 10 indicadores más cercanos al rango.</b>
+                            <br>
+                        </ng-container>
+                        
+                        <nb-accordion>
+                            <nb-accordion-item #primaryItem *ngFor="let indicador of indicadoresEncontrados | paginate: { itemsPerPage: 10, currentPage: p }; let i = index " >
+                                <nb-accordion-item-header (click)="openIndicador(indicador.id_indicador)">
+                                    <div class="titulo">
+                                        <h5>{{indicador.nombre}}</h5>
+                                    </div>
+                                    
+                                    <div class="aranya2" style="margin-left: 2%;">
+                                        <ng-container *ngIf="id_seleccionada == 1">
+                                            <button nbButton status="primary" shape="round" >
+                                                <nb-icon icon="search-outline" pack="eva">
+                
+                                                </nb-icon>
+                                                {{indicador.n_busquedas}}
+                                            </button>
+                                            
+
+                                        </ng-container>
+
+                                        <ng-container *ngIf="id_seleccionada == 3">
+                                            <button nbButton status="primary" shape="round" >
+                                                <nb-icon icon="hash-outline" pack="eva">
+                
+                                                </nb-icon>
+                                                {{indicador.n_zonas}}
+                                            </button>
+                                            
+
+                                        </ng-container>
+
+                                        <ng-container *ngIf="id_seleccionada == 4">
+                                            <button nbButton status="primary" shape="round" >
+                                                <nb-icon icon="attach-outline" pack="eva">
+                
+                                                </nb-icon>
+                                                {{indicador.n_csv}}
+                                            </button>
+                                            
+
+                                        </ng-container>
+                                        
+                                        
+                                    </div>
+                                    <!--
+                                    <ng-container *ngIf="id_seleccionada == 1">
+                                        <div class="aranya">
+                                            <ng-container *ngIf="indicador.n_busquedas > 1">
+                                                <button nbButton ghost >
+                                                    Buscado {{indicador.n_busquedas}} veces.
+                                                </button>
+                                            </ng-container>
+    
+                                            <ng-container *ngIf="indicador.n_busquedas == 1">
+                                                <button nbButton ghost >
+                                                    Buscado {{indicador.n_busquedas}} vez.
+                                                </button>
+                                            </ng-container>
+                                            
+                                        </div>
+                                    </ng-container>
+
+                                    <ng-container *ngIf="id_seleccionada == 3">
+                                        <div class="aranya">
+                                            <ng-container *ngIf="indicador.n_zonas > 1">
+                                                <button nbButton ghost >
+                                                    {{indicador.n_zonas}} Zonas Añadidas.
+                                                </button>
+                                            </ng-container>
+    
+                                            <ng-container *ngIf="indicador.n_zonas == 1">
+                                                <button nbButton ghost >
+                                                    {{indicador.n_zonas}} Zona Añadida.
+                                                </button>
+                                            </ng-container>
+                                            
+                                        </div>
+                                    </ng-container>
+
+                                    <ng-container *ngIf="id_seleccionada == 4">
+                                        <div class="aranya">
+                                            <ng-container *ngIf="indicador.n_csv > 1">
+                                                <button nbButton ghost >
+                                                    {{indicador.n_csv}} CSV Añadidos.
+                                                </button>
+                                            </ng-container>
+    
+                                            <ng-container *ngIf="indicador.n_csv == 1">
+                                                <button nbButton ghost >
+                                                    {{indicador.n_csv}} CSV Añadido.
+                                                </button>
+                                            </ng-container>
+                                            
+                                        </div>
+                                    </ng-container>
+                                    -->
+
+                                </nb-accordion-item-header>
+                                <nb-accordion-item-body >
+                                    <h6>Categorias</h6>
+                                    <nb-list>
+                                        
+                                        <nb-list-item *ngFor="let categoria of categorias_indicador">
+                                            <nb-icon icon="checkmark-square-outline" pack="eva"></nb-icon>
+        
+                                            {{categoria.nombre}}
+                                          </nb-list-item>
+                                    </nb-list>
+                                    <br>
+                                    <h6>Documentos Fuentes</h6>
+                                    <nb-list>
+                                        
+                                        <nb-list-item *ngFor="let documento of documentos_indicador">
+                                            <nb-icon icon="file-text-outline" pack="eva"></nb-icon>
+                                            <a href="{{documento.url}}" target="_blank">{{documento.nombre}}</a>
+                                          </nb-list-item>
+                                    </nb-list>
+                                    
+                                    <ng-container *ngIf="csv_indicador">
+                                        
+                                        <ng-container *ngIf="csv_indicador.length > 0">
+                                            <br>
+                                            <h6>Archivos CSV asociados</h6>
+                                            <nb-list>
+                                                
+                                                <nb-list-item *ngFor="let csv of csv_indicador">
+        
+                                                    <nb-icon icon="attach-outline" pack="eva">
+                                                        
+                                                    </nb-icon>
+                                                    
+                                                    <ng-container *ngIf="downloadFileBool">
+                                                        <a href="javascript:void(null)" (click)="downloadFile(csv.nombre)">
+                                                        
+                                                            {{csv.nombre}}
+                                                        
+                                                        </a>
+                                                    </ng-container>
+                                                    <ng-container *ngIf="!downloadFileBool">
+                                                       
+                                                        
+                                                            {{csv.nombre}}
+                                                        
+                                                        
+                                                    </ng-container>
+                                                    
+                                                </nb-list-item>
+                                            </nb-list>
+                                        </ng-container>
+                                        
+                                    </ng-container>
+        
+                                    
+                                    
+                                    <ng-container *ngIf="texto_regiones != ''">
+                                        <br>
+                                        <h6>Regiones</h6>
+                                        <nb-list-item>
+                                            <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                                         
+                                                    {{texto_regiones}}
+                                             
+                
+                                            
+                                        </nb-list-item>
+                                    </ng-container>
+        
+                                    <ng-container *ngIf="texto_provincias != ''">
+                                        <br>
+                                        <h6>Provincias</h6>
+                                        <nb-list-item>
+                                            <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                                            
+                                               
+                                                    {{texto_provincias}}
+                                            
+                                            
+                                            
+                                        </nb-list-item>
+                                    </ng-container>
+        
+                                    <ng-container *ngIf="texto_comunas!= ''">
+                                        <br>
+                                        <h6>Comunas</h6>
+                                        <nb-list-item>
+                                            <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                                              
+                                                    {{texto_comunas}}
+                                            
+                                            
+                                            
+                                            </nb-list-item>
+                                    </ng-container>
+                                    <!--
+                                    <button nbButton status="danger" (click)="openDialogAdd(indicador.id_indicador)">
+                                        <nb-icon icon="plus">
+        
+                                        </nb-icon>
+                                        Añadir archivo
+                                    </button>
+                                    -->
+        
+                                </nb-accordion-item-body>
+                            </nb-accordion-item>
+                        </nb-accordion>
+
+                        <ng-container *ngIf="indicadoresEncontrados?.length>10">
+                        
+                            <div class="paginacion">
+                                <pagination-controls (pageChange)="p=$event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+                            </div>
+                        
+                        
+                        </ng-container>
+                    </nb-card-body>
+                </nb-card>
+            </div>
+        
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="noEncontrado">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-header>Indicadores encontrados.</nb-card-header>
+                <nb-card-body>
+                    Ningún indicador fue encontrado. Prueba aumentando el rango de búsqueda.
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>  
+</ng-container>
+
+
+

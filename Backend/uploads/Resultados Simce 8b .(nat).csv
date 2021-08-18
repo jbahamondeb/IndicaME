@@ -1,0 +1,65 @@
+cod_com,comuna,agno,grado,prom_nat8b_com,dif_nat8b_com,sigdif_nat8b_com
+22,ANGOL,2015,8b,266,-9,Negativa y significativa
+1,CARAHUE,2015,8b,255,-3,No significativa
+2,CHOLCHOL,2015,8b,232,-10,No significativa
+23,COLLIPULLI,2015,8b,254,-10,Negativa y significativa
+3,CUNCO,2015,8b,249,-5,No significativa
+24,CURACAUTÍN,2015,8b,237,-19,Negativa y significativa
+12,CURARREHUE,2015,8b,244,-9,No significativa
+25,ERCILLA,2015,8b,242,-1,No significativa
+13,FREIRE,2015,8b,257,-8,Negativa y significativa
+4,GALVARINO,2015,8b,237,-17,Negativa y significativa
+14,GORBEA,2015,8b,257,-5,No significativa
+5,LAUTARO,2015,8b,254,-10,Negativa y significativa
+15,LONCOCHE,2015,8b,267,-2,No significativa
+26,LONQUIMAY,2015,8b,236,-6,No significativa
+27,LOS SAUCES,2015,8b,246,-3,No significativa
+28,LUMACO,2015,8b,238,-22,Negativa y significativa
+6,MELIPEUCO,2015,8b,264,9,No significativa
+7,NUEVA IMPERIAL,2015,8b,257,-3,No significativa
+16,PADRE LAS CASAS,2015,8b,251,-6,No significativa
+8,PERQUENCO,2015,8b,240,-2,No significativa
+17,PITRUFQUÉN,2015,8b,262,-5,No significativa
+18,PUCÓN,2015,8b,274,-7,No significativa
+29,PURÉN,2015,8b,260,-5,No significativa
+30,RENAICO,2015,8b,247,-10,No significativa
+9,SAAVEDRA,2015,8b,230,-4,No significativa
+10,TEMUCO,2015,8b,272,-8,Negativa y significativa
+19,TEODORO SCHMIDT,2015,8b,237,-16,Negativa y significativa
+20,TOLTÉN,2015,8b,261,0,No significativa
+31,TRAIGUÉN,2015,8b,263,-12,Negativa y significativa
+32,VICTORIA,2015,8b,251,-9,Negativa y significativa
+11,VILCÚN,2015,8b,262,-6,No significativa
+21,VILLARRICA,2015,8b,271,-5,No significativa
+9201,ANGOL,2017,8b,258,-8,No significativa
+9102,CARAHUE,2017,8b,246,-9,Negativa y significativa
+9121,CHOLCHOL,2017,8b,237,5,No significativa
+9202,COLLIPULLI,2017,8b,247,-7,No significativa
+9103,CUNCO,2017,8b,246,-3,No significativa
+9203,CURACAUTÍN,2017,8b,240,2,No significativa
+9104,CURARREHUE,2017,8b,249,6,No significativa
+9204,ERCILLA,2017,8b,242,0,No significativa
+9105,FREIRE,2017,8b,242,-15,Negativa y significativa
+9106,GALVARINO,2017,8b,237,0,No significativa
+9107,GORBEA,2017,8b,240,-17,Negativa y significativa
+9108,LAUTARO,2017,8b,245,-9,Negativa y significativa
+9109,LONCOCHE,2017,8b,258,-9,No significativa
+9205,LONQUIMAY,2017,8b,232,-3,No significativa
+9206,LOS SAUCES,2017,8b,245,-1,No significativa
+9207,LUMACO,2017,8b,246,8,No significativa
+9110,MELIPEUCO,2017,8b,250,-14,Negativa y significativa
+9111,NUEVA IMPERIAL,2017,8b,253,-5,No significativa
+9112,PADRE LAS CASAS,2017,8b,248,-1,No significativa
+9113,PERQUENCO,2017,8b,236,-4,No significativa
+9114,PITRUFQUÉN,2017,8b,255,-7,No significativa
+9115,PUCÓN,2017,8b,268,-6,No significativa
+9208,PURÉN,2017,8b,247,-13,Negativa y significativa
+9209,RENAICO,2017,8b,247,0,No significativa
+9116,SAAVEDRA,2017,8b,239,10,No significativa
+9101,TEMUCO,2017,8b,264,-8,Negativa y significativa
+9117,TEODORO SCHMIDT,2017,8b,243,5,No significativa
+9118,TOLTÉN,2017,8b,241,-19,Negativa y significativa
+9210,TRAIGUÉN,2017,8b,254,-9,No significativa
+9211,VICTORIA,2017,8b,254,3,No significativa
+9119,VILCÚN,2017,8b,247,-15,Negativa y significativa
+9120,VILLARRICA,2017,8b,263,-8,Negativa y significativa

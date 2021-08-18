@@ -1,0 +1,693 @@
+cod_com,comuna,agno,grado,prom_nat2m_com,dif_nat2m_com,sigdif_nat2m_com
+11201,AISÉN,2016,2m,242,-15,Negativa y significativa
+5602,ALGARROBO,2016,2m,225,-4,No significativa
+13502,ALHUÉ,2016,2m,210,-19,Negativa y significativa
+8314,ALTO BIOBÍO,2016,2m,205,5,No significativa
+3302,ALTO DEL CARMEN,2016,2m,213,13,No significativa
+1107,ALTO HOSPICIO,2016,2m,227,-5,No significativa
+10202,ANCUD,2016,2m,238,-7,No significativa
+4103,ANDACOLLO,2016,2m,216,-14,No significativa
+9201,ANGOL,2016,2m,240,-5,No significativa
+2101,ANTOFAGASTA,2016,2m,237,-13,Negativa y significativa
+8302,ANTUCO,2016,2m,237,3,No significativa
+12202,ANTÁRTICA,2016,2m,NA,NA,NA
+8202,ARAUCO,2016,2m,229,-19,Negativa y significativa
+15101,ARICA,2016,2m,237,-4,No significativa
+13402,BUIN,2016,2m,243,-1,No significativa
+8402,BULNES,2016,2m,230,-9,Negativa y significativa
+5402,CABILDO,2016,2m,233,-11,Negativa y significativa
+12201,CABO DE HORNOS,2016,2m,220,-40,Negativa y significativa
+8303,CABRERO,2016,2m,221,4,No significativa
+2201,CALAMA,2016,2m,244,-6,No significativa
+10102,CALBUCO,2016,2m,228,-22,Negativa y significativa
+3102,CALDERA,2016,2m,220,-21,Negativa y significativa
+5502,CALERA,2016,2m,242,-4,No significativa
+13403,CALERA DE TANGO,2016,2m,261,0,No significativa
+5302,CALLE LARGA,2016,2m,241,6,No significativa
+15102,CAMARONES,2016,2m,228,0,No significativa
+1402,CAMIÑA,2016,2m,234,33,Positiva y significativa
+4202,CANELA,2016,2m,235,29,Positiva y significativa
+9102,CARAHUE,2016,2m,212,-3,No significativa
+5603,CARTAGENA,2016,2m,225,-20,Negativa y significativa
+5102,CASABLANCA,2016,2m,237,-7,No significativa
+10201,CASTRO,2016,2m,241,-12,Negativa y significativa
+5702,CATEMU,2016,2m,224,1,No significativa
+7201,CAUQUENES,2016,2m,232,-4,No significativa
+8203,CAÑETE,2016,2m,238,-7,No significativa
+13102,CERRILLOS,2016,2m,235,-3,No significativa
+13103,CERRO NAVIA,2016,2m,223,-5,No significativa
+10401,CHAITÉN,2016,2m,243,8,No significativa
+7202,CHANCO,2016,2m,211,-10,No significativa
+3201,CHAÑARAL,2016,2m,211,-15,Negativa y significativa
+8103,CHIGUAYANTE,2016,2m,248,-20,Negativa y significativa
+11401,CHILE CHICO,2016,2m,238,-4,No significativa
+8401,CHILLÁN,2016,2m,245,-10,Negativa y significativa
+8406,CHILLÁN VIEJO,2016,2m,219,-8,No significativa
+6303,CHIMBARONGO,2016,2m,230,-12,Negativa y significativa
+9121,CHOLCHOL,2016,2m,221,4,No significativa
+10203,CHONCHI,2016,2m,214,-8,No significativa
+6302,CHÉPICA,2016,2m,224,0,No significativa
+11202,CISNES,2016,2m,228,-13,No significativa
+8403,COBQUECURA,2016,2m,212,-2,No significativa
+10103,COCHAMÓ,2016,2m,220,0,No significativa
+11301,COCHRANE,2016,2m,218,-27,Negativa y significativa
+6102,CODEGUA,2016,2m,221,7,No significativa
+8404,COELEMU,2016,2m,232,2,No significativa
+11101,COIHAIQUE,2016,2m,241,-10,Negativa y significativa
+8405,COIHUECO,2016,2m,240,11,Positiva y significativa
+6103,COINCO,2016,2m,232,15,No significativa
+7402,COLBÚN,2016,2m,212,-7,No significativa
+1403,COLCHANE,2016,2m,197,0,No significativa
+13301,COLINA,2016,2m,255,-4,No significativa
+9202,COLLIPULLI,2016,2m,219,-14,Negativa y significativa
+6104,COLTAUCO,2016,2m,221,1,No significativa
+4302,COMBARBALÁ,2016,2m,231,-1,No significativa
+8101,CONCEPCIÓN,2016,2m,250,-8,Negativa y significativa
+13104,CONCHALÍ,2016,2m,221,-11,Negativa y significativa
+5103,CONCÓN,2016,2m,263,-6,No significativa
+7102,CONSTITUCIÓN,2016,2m,244,-9,Negativa y significativa
+8204,CONTULMO,2016,2m,230,2,No significativa
+3101,COPIAPÓ,2016,2m,235,-12,Negativa y significativa
+4102,COQUIMBO,2016,2m,241,-5,No significativa
+8102,CORONEL,2016,2m,225,-16,Negativa y significativa
+14102,CORRAL,2016,2m,226,-2,No significativa
+9103,CUNCO,2016,2m,229,4,No significativa
+9203,CURACAUTÍN,2016,2m,218,-4,No significativa
+13503,CURACAVÍ,2016,2m,234,-3,No significativa
+10204,CURACO DE VÉLEZ,2016,2m,231,-1,No significativa
+8205,CURANILAHUE,2016,2m,224,-6,No significativa
+9104,CURARREHUE,2016,2m,215,-5,No significativa
+7103,CUREPTO,2016,2m,223,-20,Negativa y significativa
+7301,CURICÓ,2016,2m,250,-4,No significativa
+10205,DALCAHUE,2016,2m,207,-3,No significativa
+3202,DIEGO DE ALMAGRO,2016,2m,232,-5,No significativa
+6105,DOÑIHUE,2016,2m,256,-4,No significativa
+13105,EL BOSQUE,2016,2m,243,-1,No significativa
+8407,EL CARMEN,2016,2m,234,-8,No significativa
+13602,EL MONTE,2016,2m,220,-2,No significativa
+5604,EL QUISCO,2016,2m,225,-5,No significativa
+5605,EL TABO,2016,2m,240,17,No significativa
+7104,EMPEDRADO,2016,2m,199,-24,Negativa y significativa
+9204,ERCILLA,2016,2m,253,64,Positiva y significativa
+13106,ESTACIÓN CENTRAL,2016,2m,232,-13,Negativa y significativa
+8104,FLORIDA,2016,2m,222,-11,No significativa
+9105,FREIRE,2016,2m,214,-1,No significativa
+3303,FREIRINA,2016,2m,201,-39,Negativa y significativa
+10104,FRESIA,2016,2m,227,-12,No significativa
+10105,FRUTILLAR,2016,2m,233,-16,Negativa y significativa
+10402,FUTALEUFÚ,2016,2m,234,-19,No significativa
+14202,FUTRONO,2016,2m,220,-13,Negativa y significativa
+9106,GALVARINO,2016,2m,204,-12,No significativa
+15202,GENERAL LAGOS,2016,2m,NA,NA,NA
+9107,GORBEA,2016,2m,219,9,No significativa
+6106,GRANEROS,2016,2m,219,-8,No significativa
+11203,GUAITECAS,2016,2m,223,7,No significativa
+5503,HIJUELAS,2016,2m,227,-8,No significativa
+10403,HUALAIHUÉ,2016,2m,233,0,No significativa
+7302,HUALAÑÉ,2016,2m,233,-13,Negativa y significativa
+8112,HUALPÉN,2016,2m,247,-12,Negativa y significativa
+8105,HUALQUI,2016,2m,210,-10,No significativa
+1404,HUARA,2016,2m,211,2,No significativa
+3304,HUASCO,2016,2m,209,-20,Negativa y significativa
+13107,HUECHURABA,2016,2m,260,-12,Negativa y significativa
+4201,ILLAPEL,2016,2m,232,-4,No significativa
+13108,INDEPENDENCIA,2016,2m,234,-3,No significativa
+1101,IQUIQUE,2016,2m,240,-7,No significativa
+13603,ISLA DE MAIPO,2016,2m,229,-4,No significativa
+5201,ISLA DE PASCUA,2016,2m,240,4,No significativa
+5104,JUAN FERNÁNDEZ,2016,2m,249,24,No significativa
+13109,LA CISTERNA,2016,2m,232,-3,No significativa
+5504,LA CRUZ,2016,2m,223,1,No significativa
+6202,LA ESTRELLA,2016,2m,NA,NA,NA
+13110,LA FLORIDA,2016,2m,247,-7,Negativa y significativa
+13111,LA GRANJA,2016,2m,234,-4,No significativa
+4104,LA HIGUERA,2016,2m,NA,NA,NA
+5401,LA LIGUA,2016,2m,233,-10,Negativa y significativa
+13112,LA PINTANA,2016,2m,232,-5,No significativa
+13113,LA REINA,2016,2m,277,-5,No significativa
+4101,LA SERENA,2016,2m,250,-11,Negativa y significativa
+14201,LA UNIÓN,2016,2m,235,-14,Negativa y significativa
+14203,LAGO RANCO,2016,2m,241,6,No significativa
+11102,LAGO VERDE,2016,2m,NA,NA,NA
+12102,LAGUNA BLANCA,2016,2m,NA,NA,NA
+8304,LAJA,2016,2m,231,-11,Negativa y significativa
+13302,LAMPA,2016,2m,230,-2,No significativa
+14103,LANCO,2016,2m,223,1,No significativa
+6107,LAS CABRAS,2016,2m,233,-7,No significativa
+13114,LAS CONDES,2016,2m,287,-9,Negativa y significativa
+9108,LAUTARO,2016,2m,215,-2,No significativa
+8201,LEBU,2016,2m,236,0,No significativa
+7303,LICANTÉN,2016,2m,235,-1,No significativa
+5802,LIMACHE,2016,2m,228,-11,Negativa y significativa
+7401,LINARES,2016,2m,247,-7,No significativa
+6203,LITUECHE,2016,2m,255,19,Positiva y significativa
+5703,LLAILLAY,2016,2m,226,-9,No significativa
+10107,LLANQUIHUE,2016,2m,212,-12,No significativa
+13115,LO BARNECHEA,2016,2m,285,-5,No significativa
+13116,LO ESPEJO,2016,2m,228,-11,Negativa y significativa
+13117,LO PRADO,2016,2m,221,1,No significativa
+6304,LOLOL,2016,2m,224,-16,Negativa y significativa
+9109,LONCOCHE,2016,2m,233,-5,No significativa
+7403,LONGAVÍ,2016,2m,229,0,No significativa
+9205,LONQUIMAY,2016,2m,224,0,No significativa
+5301,LOS ANDES,2016,2m,235,-6,No significativa
+14104,LOS LAGOS,2016,2m,217,-16,Negativa y significativa
+10106,LOS MUERMOS,2016,2m,225,-15,Negativa y significativa
+9206,LOS SAUCES,2016,2m,219,-3,No significativa
+4203,LOS VILOS,2016,2m,224,-3,No significativa
+8206,LOS ÁLAMOS,2016,2m,214,-7,No significativa
+8301,LOS ÁNGELES,2016,2m,245,-9,Negativa y significativa
+8106,LOTA,2016,2m,228,-7,No significativa
+9207,LUMACO,2016,2m,204,-5,No significativa
+6108,MACHALÍ,2016,2m,265,-6,No significativa
+13118,MACUL,2016,2m,247,-13,Negativa y significativa
+13119,MAIPÚ,2016,2m,250,-6,Negativa y significativa
+6109,MALLOA,2016,2m,219,14,No significativa
+6204,MARCHIHUE,2016,2m,235,10,No significativa
+14106,MARIQUINA,2016,2m,249,6,No significativa
+2302,MARÍA ELENA,2016,2m,227,12,No significativa
+13504,MARÍA PINTO,2016,2m,204,-16,Negativa y significativa
+7105,MAULE,2016,2m,241,2,No significativa
+10108,MAULLÍN,2016,2m,212,-13,No significativa
+2102,MEJILLONES,2016,2m,208,-7,No significativa
+9110,MELIPEUCO,2016,2m,227,-2,No significativa
+13501,MELIPILLA,2016,2m,232,-8,Negativa y significativa
+7304,MOLINA,2016,2m,229,-3,No significativa
+4303,MONTE PATRIA,2016,2m,230,28,Positiva y significativa
+6110,MOSTAZAL,2016,2m,205,-9,No significativa
+8305,MULCHÉN,2016,2m,224,-8,No significativa
+14105,MÁFIL,2016,2m,223,4,No significativa
+8306,NACIMIENTO,2016,2m,234,-10,No significativa
+6305,NANCAGUA,2016,2m,231,0,No significativa
+12401,NATALES,2016,2m,229,-5,No significativa
+6205,NAVIDAD,2016,2m,246,19,Positiva y significativa
+8307,NEGRETE,2016,2m,216,-1,No significativa
+8408,NINHUE,2016,2m,219,-19,Negativa y significativa
+5506,NOGALES,2016,2m,224,0,No significativa
+9111,NUEVA IMPERIAL,2016,2m,223,-8,No significativa
+11302,O'HIGGINS,2016,2m,NA,NA,NA
+6111,OLIVAR,2016,2m,239,1,No significativa
+2202,OLLAGÜE,2016,2m,NA,NA,NA
+5803,OLMUÉ,2016,2m,215,-9,No significativa
+10301,OSORNO,2016,2m,244,-6,No significativa
+4301,OVALLE,2016,2m,240,-6,No significativa
+13604,PADRE HURTADO,2016,2m,231,-10,Negativa y significativa
+9112,PADRE LAS CASAS,2016,2m,231,-2,No significativa
+4105,PAIGUANO,2016,2m,225,0,No significativa
+14107,PAILLACO,2016,2m,229,5,No significativa
+13404,PAINE,2016,2m,236,-4,No significativa
+10404,PALENA,2016,2m,237,-10,No significativa
+6306,PALMILLA,2016,2m,214,-4,No significativa
+14108,PANGUIPULLI,2016,2m,230,-1,No significativa
+5704,PANQUEHUE,2016,2m,251,-14,No significativa
+5403,PAPUDO,2016,2m,225,-9,No significativa
+6206,PAREDONES,2016,2m,215,-1,No significativa
+7404,PARRAL,2016,2m,251,-6,No significativa
+13121,PEDRO AGUIRRE CERDA,2016,2m,234,-10,Negativa y significativa
+7106,PELARCO,2016,2m,222,-3,No significativa
+7203,PELLUHUE,2016,2m,211,-18,Negativa y significativa
+8410,PEMUCO,2016,2m,214,-8,No significativa
+7107,PENCAHUE,2016,2m,218,-2,No significativa
+8107,PENCO,2016,2m,228,-22,Negativa y significativa
+6307,PERALILLO,2016,2m,226,-4,No significativa
+9113,PERQUENCO,2016,2m,213,-12,No significativa
+5404,PETORCA,2016,2m,217,-7,No significativa
+6112,PEUMO,2016,2m,215,-9,No significativa
+13605,PEÑAFLOR,2016,2m,230,-5,No significativa
+13122,PEÑALOLÉN,2016,2m,252,-6,No significativa
+1405,PICA,2016,2m,203,0,No significativa
+6113,PICHIDEGUA,2016,2m,214,-1,No significativa
+6201,PICHILEMU,2016,2m,238,-10,No significativa
+8411,PINTO,2016,2m,227,-3,No significativa
+13202,PIRQUE,2016,2m,227,-6,No significativa
+9114,PITRUFQUÉN,2016,2m,232,-8,No significativa
+6308,PLACILLA,2016,2m,226,25,No significativa
+8412,PORTEZUELO,2016,2m,228,2,No significativa
+12301,PORVENIR,2016,2m,220,-12,No significativa
+1401,POZO ALMONTE,2016,2m,208,-3,No significativa
+12302,PRIMAVERA,2016,2m,NA,NA,NA
+13123,PROVIDENCIA,2016,2m,280,-10,Negativa y significativa
+5105,PUCHUNCAVÍ,2016,2m,213,-11,No significativa
+9115,PUCÓN,2016,2m,233,-11,Negativa y significativa
+13124,PUDAHUEL,2016,2m,229,-1,No significativa
+13201,PUENTE ALTO,2016,2m,245,-4,No significativa
+10101,PUERTO MONTT,2016,2m,238,-9,Negativa y significativa
+10302,PUERTO OCTAY,2016,2m,216,2,No significativa
+10109,PUERTO VARAS,2016,2m,248,-10,Negativa y significativa
+6309,PUMANQUE,2016,2m,NA,NA,NA
+4304,PUNITAQUI,2016,2m,236,-8,No significativa
+12101,PUNTA ARENAS,2016,2m,240,-16,Negativa y significativa
+10206,PUQUELDÓN,2016,2m,NA,NA,NA
+10303,PURRANQUE,2016,2m,230,-18,Negativa y significativa
+9208,PURÉN,2016,2m,233,-16,Negativa y significativa
+5705,PUTAENDO,2016,2m,220,-21,Negativa y significativa
+15201,PUTRE,2016,2m,209,-6,No significativa
+10304,PUYEHUE,2016,2m,230,7,No significativa
+10207,QUEILÉN,2016,2m,218,-9,No significativa
+10208,QUELLÓN,2016,2m,226,-15,Negativa y significativa
+10209,QUEMCHI,2016,2m,209,-14,No significativa
+8308,QUILACO,2016,2m,237,19,No significativa
+13125,QUILICURA,2016,2m,243,-4,No significativa
+8309,QUILLECO,2016,2m,224,0,No significativa
+5501,QUILLOTA,2016,2m,250,-3,No significativa
+8413,QUILLÓN,2016,2m,219,-7,No significativa
+5801,QUILPUÉ,2016,2m,242,-7,Negativa y significativa
+10210,QUINCHAO,2016,2m,241,1,No significativa
+6114,QUINTA DE TILCOCO,2016,2m,240,-3,No significativa
+13126,QUINTA NORMAL,2016,2m,229,-9,Negativa y significativa
+5107,QUINTERO,2016,2m,230,-11,Negativa y significativa
+8414,QUIRIHUE,2016,2m,244,2,No significativa
+6101,RANCAGUA,2016,2m,251,-1,No significativa
+7305,RAUCO,2016,2m,192,-13,No significativa
+13127,RECOLETA,2016,2m,236,-6,No significativa
+9209,RENAICO,2016,2m,213,2,No significativa
+13128,RENCA,2016,2m,240,2,No significativa
+6115,RENGO,2016,2m,237,-8,No significativa
+6116,REQUÍNOA,2016,2m,246,3,No significativa
+7405,RETIRO,2016,2m,227,-2,No significativa
+5303,RINCONADA,2016,2m,259,14,No significativa
+7306,ROMERAL,2016,2m,226,-1,No significativa
+8415,RÁNQUIL,2016,2m,209,-10,No significativa
+14204,RÍO BUENO,2016,2m,232,-1,No significativa
+7108,RÍO CLARO,2016,2m,225,-9,No significativa
+4305,RÍO HURTADO,2016,2m,216,0,No significativa
+11402,RÍO IBÁÑEZ,2016,2m,208,-23,No significativa
+10305,RÍO NEGRO,2016,2m,226,-8,No significativa
+12103,RÍO VERDE,2016,2m,NA,NA,NA
+9116,SAAVEDRA,2016,2m,208,-8,No significativa
+7307,SAGRADA FAMILIA,2016,2m,210,-7,No significativa
+4204,SALAMANCA,2016,2m,238,-2,No significativa
+5601,SAN ANTONIO,2016,2m,234,-10,Negativa y significativa
+13401,SAN BERNARDO,2016,2m,233,-9,Negativa y significativa
+8416,SAN CARLOS,2016,2m,239,-12,Negativa y significativa
+7109,SAN CLEMENTE,2016,2m,215,-7,No significativa
+5304,SAN ESTEBAN,2016,2m,221,4,No significativa
+8417,SAN FABIÁN,2016,2m,250,27,Positiva y significativa
+5701,SAN FELIPE,2016,2m,245,-5,No significativa
+6301,SAN FERNANDO,2016,2m,242,-7,No significativa
+12104,SAN GREGORIO,2016,2m,NA,NA,NA
+8418,SAN IGNACIO,2016,2m,223,1,No significativa
+7406,SAN JAVIER,2016,2m,240,-8,No significativa
+13129,SAN JOAQUÍN,2016,2m,222,-14,Negativa y significativa
+13203,SAN JOSÉ DE MAIPO,2016,2m,227,-9,No significativa
+10306,SAN JUAN DE LA COSTA,2016,2m,209,-14,No significativa
+13130,SAN MIGUEL,2016,2m,234,-8,Negativa y significativa
+8419,SAN NICOLÁS,2016,2m,273,-7,No significativa
+10307,SAN PABLO,2016,2m,216,-11,No significativa
+13505,SAN PEDRO,2016,2m,217,-2,No significativa
+2203,SAN PEDRO DE ATACAMA,2016,2m,231,8,No significativa
+8108,SAN PEDRO DE LA PAZ,2016,2m,262,-12,Negativa y significativa
+7110,SAN RAFAEL,2016,2m,NA,NA,NA
+13131,SAN RAMÓN,2016,2m,225,-5,No significativa
+8310,SAN ROSENDO,2016,2m,224,-9,No significativa
+6117,SAN VICENTE,2016,2m,246,-14,Negativa y significativa
+8311,SANTA BÁRBARA,2016,2m,219,-3,No significativa
+6310,SANTA CRUZ,2016,2m,249,-12,Negativa y significativa
+8109,SANTA JUANA,2016,2m,235,8,No significativa
+5706,SANTA MARÍA,2016,2m,237,6,No significativa
+13101,SANTIAGO,2016,2m,251,-10,Negativa y significativa
+5606,SANTO DOMINGO,2016,2m,234,-11,No significativa
+2103,SIERRA GORDA,2016,2m,NA,NA,NA
+13601,TALAGANTE,2016,2m,243,-2,No significativa
+7101,TALCA,2016,2m,241,-7,Negativa y significativa
+8110,TALCAHUANO,2016,2m,239,-15,Negativa y significativa
+2104,TALTAL,2016,2m,217,3,No significativa
+9101,TEMUCO,2016,2m,251,-4,No significativa
+7308,TENO,2016,2m,253,1,No significativa
+9117,TEODORO SCHMIDT,2016,2m,214,0,No significativa
+3103,TIERRA AMARILLA,2016,2m,202,0,No significativa
+13303,TIL TIL,2016,2m,222,8,No significativa
+12303,TIMAUKEL,2016,2m,NA,NA,NA
+8207,TIRÚA,2016,2m,211,0,No significativa
+2301,TOCOPILLA,2016,2m,221,-9,No significativa
+9118,TOLTÉN,2016,2m,219,0,No significativa
+8111,TOMÉ,2016,2m,214,-14,Negativa y significativa
+12402,TORRES DEL PAINE,2016,2m,NA,NA,NA
+11303,TORTEL,2016,2m,NA,NA,NA
+9210,TRAIGUÉN,2016,2m,225,12,No significativa
+8420,TREGUACO,2016,2m,218,-9,No significativa
+8312,TUCAPEL,2016,2m,229,5,No significativa
+14101,VALDIVIA,2016,2m,246,-8,Negativa y significativa
+3301,VALLENAR,2016,2m,234,-4,No significativa
+5101,VALPARAÍSO,2016,2m,236,-14,Negativa y significativa
+7309,VICHUQUÉN,2016,2m,228,-6,No significativa
+9211,VICTORIA,2016,2m,227,-13,Negativa y significativa
+4106,VICUÑA,2016,2m,229,-20,Negativa y significativa
+9119,VILCÚN,2016,2m,226,0,No significativa
+7407,VILLA ALEGRE,2016,2m,203,-15,No significativa
+5804,VILLA ALEMANA,2016,2m,251,-11,Negativa y significativa
+9120,VILLARRICA,2016,2m,247,-4,No significativa
+13132,VITACURA,2016,2m,301,-4,No significativa
+5109,VIÑA DEL MAR,2016,2m,253,-8,Negativa y significativa
+7408,YERBAS BUENAS,2016,2m,229,-7,No significativa
+8313,YUMBEL,2016,2m,227,-22,Negativa y significativa
+8421,YUNGAY,2016,2m,242,-11,Negativa y significativa
+5405,ZAPALLAR,2016,2m,243,-1,No significativa
+8409,ÑIQUÉN,2016,2m,213,0,No significativa
+13120,ÑUÑOA,2016,2m,251,-7,Negativa y significativa
+1101,Iquique,2018,2m,242,2,0
+1107,Alto Hospicio,2018,2m,233,6,0
+1401,Pozo Almonte,2018,2m,224,16,1
+1402,Camiña,2018,2m,222,-12,0
+1403,Colchane,2018,2m,209,0,0
+1404,Huara,2018,2m,195,-16,0
+1405,Pica,2018,2m,218,15,1
+2101,Antofagasta,2018,2m,239,2,0
+2102,Mejillones,2018,2m,208,0,0
+2103,Sierra Gorda,2018,2m,197,0,0
+2104,Taltal,2018,2m,210,-7,0
+2301,Tocopilla,2018,2m,220,-1,0
+2302,María Elena,2018,2m,229,2,0
+2201,Calama,2018,2m,243,1,0
+2202,Ollagüe,2018,2m,NA,NA,NA
+2203,San Pedro de Atacama,2018,2m,239,8,0
+3101,Copiapó,2018,2m,236,1,0
+3102,Caldera,2018,2m,223,3,0
+3103,Tierra Amarilla,2018,2m,194,-8,0
+3201,Chañaral,2018,2m,219,8,0
+3202,Diego de Almagro,2018,2m,228,-4,0
+3301,Vallenar,2018,2m,236,2,0
+3302,Alto del Carmen,2018,2m,216,3,0
+3303,Freirina,2018,2m,206,5,0
+3304,Huasco,2018,2m,233,24,1
+4101,La Serena,2018,2m,250,0,0
+4102,Coquimbo,2018,2m,245,4,0
+4103,Andacollo,2018,2m,239,23,1
+4104,La Higuera,2018,2m,196,0,0
+4105,Paihuano,2018,2m,236,11,0
+4106,Vicuña,2018,2m,234,5,0
+4202,Canela,2018,2m,222,-13,-1
+4203,Los Vilos,2018,2m,240,16,1
+4204,Salamanca,2018,2m,242,4,0
+4301,Ovalle,2018,2m,247,7,1
+4302,Combarbalá,2018,2m,227,-4,0
+4303,Monte Patria,2018,2m,232,2,0
+4304,Punitaqui,2018,2m,242,6,0
+4305,Río Hurtado,2018,2m,236,20,1
+4201,Illapel,2018,2m,230,-2,0
+5401,La Ligua,2018,2m,234,1,0
+5402,Cabildo,2018,2m,234,1,0
+5403,Papudo,2018,2m,216,-9,0
+5404,Petorca,2018,2m,238,21,1
+5405,Zapallar,2018,2m,247,4,0
+5501,Quillota,2018,2m,245,-4,0
+5605,El Tabo,2018,2m,218,-22,-1
+5606,Santo Domingo,2018,2m,234,0,0
+5801,Quilpué,2018,2m,244,3,0
+5804,Villa Alemana,2018,2m,255,4,0
+5601,San Antonio,2018,2m,238,4,0
+5602,Algarrobo,2018,2m,223,-2,0
+5603,Cartagena,2018,2m,231,5,0
+5604,El Quisco,2018,2m,249,24,1
+5103,Concón,2018,2m,266,3,0
+5104,Juan Fernández,2018,2m,249,0,0
+5105,Puchuncaví,2018,2m,223,10,0
+5107,Quintero,2018,2m,237,7,0
+5109,Viña del Mar,2018,2m,253,0,0
+5201,Isla de Pascua,2018,2m,225,-15,-1
+5703,Llaillay,2018,2m,231,5,0
+5704,Panquehue,2018,2m,267,16,1
+5705,Putaendo,2018,2m,233,11,0
+5706,Santa María,2018,2m,237,0,0
+5101,Valparaíso,2018,2m,239,3,0
+5102,Casablanca,2018,2m,241,4,0
+5301,Los Andes,2018,2m,238,3,0
+5302,Calle Larga,2018,2m,234,-7,0
+5303,Rinconada,2018,2m,254,-5,0
+5304,San Esteban,2018,2m,224,3,0
+5701,San Felipe,2018,2m,251,6,0
+5702,Catemu,2018,2m,233,9,0
+5502,La Calera,2018,2m,238,-4,0
+5503,Hijuelas,2018,2m,240,13,1
+5504,La Cruz,2018,2m,235,12,0
+5506,Nogales,2018,2m,224,0,0
+5802,Limache,2018,2m,230,4,0
+5803,Olmué,2018,2m,218,3,0
+6101,Rancagua,2018,2m,251,-1,0
+6102,Codegua,2018,2m,222,1,0
+6103,Coinco,2018,2m,213,-19,-1
+6104,Coltauco,2018,2m,228,7,0
+6105,Doñihue,2018,2m,244,-12,-1
+6106,Graneros,2018,2m,217,-2,0
+6204,Marchihue,2018,2m,245,10,0
+6205,Navidad,2018,2m,236,-10,0
+6206,Paredones,2018,2m,215,0,0
+6308,Placilla,2018,2m,218,-8,0
+6309,Pumanque,2018,2m,NA,NA,NA
+6310,Santa Cruz,2018,2m,252,3,0
+6201,Pichilemu,2018,2m,240,2,0
+6202,La Estrella,2018,2m,NA,NA,NA
+6203,Litueche,2018,2m,257,2,0
+6302,Chépica,2018,2m,211,-13,-1
+6303,Chimbarongo,2018,2m,237,7,0
+6304,Lolol,2018,2m,239,15,1
+6305,Nancagua,2018,2m,237,6,0
+6306,Palmilla,2018,2m,210,-4,0
+6307,Peralillo,2018,2m,225,-1,0
+6108,Machalí,2018,2m,263,-2,0
+6109,Malloa,2018,2m,218,-1,0
+6110,Mostazal,2018,2m,217,13,0
+6111,Olivar,2018,2m,244,5,0
+6112,Peumo,2018,2m,241,26,1
+6301,San Fernando,2018,2m,241,-1,0
+6113,Pichidegua,2018,2m,203,-11,0
+6114,Quinta de Tilcoco,2018,2m,239,-1,0
+6115,Rengo,2018,2m,241,5,0
+6116,Requínoa,2018,2m,233,-13,-1
+6117,San Vicente,2018,2m,241,-5,0
+6107,Las Cabras,2018,2m,224,-9,0
+7301,Curicó,2018,2m,252,2,0
+7308,Teno,2018,2m,252,-1,0
+7309,Vichuquén,2018,2m,247,19,1
+7302,Hualañé,2018,2m,234,1,0
+7303,Licantén,2018,2m,243,10,0
+7304,Molina,2018,2m,226,-4,0
+7406,San Javier,2018,2m,248,8,1
+7407,Villa Alegre,2018,2m,211,8,0
+7408,Yerbas Buenas,2018,2m,214,-15,-1
+7201,Cauquenes,2018,2m,231,-5,0
+7202,Chanco,2018,2m,212,1,0
+7203,Pelluhue,2018,2m,232,21,1
+7110,San Rafael,2018,2m,NA,NA,NA
+7401,Linares,2018,2m,245,-2,0
+7402,Colbún,2018,2m,220,8,0
+7403,Longaví,2018,2m,220,-9,0
+7404,Parral,2018,2m,248,-3,0
+7405,Retiro,2018,2m,233,6,0
+7104,Empedrado,2018,2m,223,24,1
+7105,Maule,2018,2m,229,-13,-1
+7106,Pelarco,2018,2m,189,-33,-1
+7107,Pencahue,2018,2m,197,-21,0
+7108,Río Claro,2018,2m,229,4,0
+7109,San Clemente,2018,2m,222,7,0
+7305,Rauco,2018,2m,201,9,0
+7306,Romeral,2018,2m,224,-2,0
+7307,Sagrada Familia,2018,2m,222,12,0
+7101,Talca,2018,2m,241,0,0
+7102,Constitución,2018,2m,252,8,0
+7103,Curepto,2018,2m,228,5,0
+8301,Los Ángeles,2018,2m,249,4,0
+8302,Antuco,2018,2m,211,-26,-1
+8303,Cabrero,2018,2m,229,8,0
+8304,Laja,2018,2m,233,-1,0
+8305,Mulchén,2018,2m,233,9,1
+8306,Nacimiento,2018,2m,229,-5,0
+8205,Curanilahue,2018,2m,224,0,0
+8206,Los Álamos,2018,2m,224,6,0
+8207,Tirúa,2018,2m,208,-3,0
+8111,Tomé,2018,2m,230,13,1
+8112,Hualpén,2018,2m,254,4,0
+8201,Lebu,2018,2m,234,-2,0
+8202,Arauco,2018,2m,237,8,0
+8203,Cañete,2018,2m,252,14,1
+8204,Contulmo,2018,2m,255,25,1
+8105,Hualqui,2018,2m,218,8,0
+8106,Lota,2018,2m,234,7,0
+8107,Penco,2018,2m,231,3,0
+8108,San Pedro de la Paz,2018,2m,267,5,0
+8109,Santa Juana,2018,2m,235,0,0
+8110,Talcahuano,2018,2m,243,5,0
+8311,Santa Bárbara,2018,2m,234,15,1
+8312,Tucapel,2018,2m,235,6,0
+8101,Concepción,2018,2m,251,2,0
+8102,Coronel,2018,2m,233,8,1
+8103,Chiguayante,2018,2m,265,17,1
+8104,Florida,2018,2m,229,7,0
+8313,Yumbel,2018,2m,236,2,0
+8314,Alto Biobío,2018,2m,212,7,0
+8307,Negrete,2018,2m,218,2,0
+8308,Quilaco,2018,2m,221,-16,0
+8309,Quilleco,2018,2m,218,-6,0
+8310,San Rosendo,2018,2m,250,26,1
+9201,Angol,2018,2m,245,4,0
+9202,Collipulli,2018,2m,235,16,1
+9203,Curacautín,2018,2m,225,7,0
+9204,Ercilla,2018,2m,227,-26,0
+9205,Lonquimay,2018,2m,220,-4,0
+9206,Los Sauces,2018,2m,208,-11,0
+9118,Toltén,2018,2m,213,-6,0
+9120,Villarrica,2018,2m,248,1,0
+9107,Gorbea,2018,2m,225,6,0
+9109,Loncoche,2018,2m,242,9,0
+9112,Padre las Casas,2018,2m,233,2,0
+9114,Pitrufquén,2018,2m,246,14,1
+9115,Pucón,2018,2m,245,12,1
+9117,Teodoro Schmidt,2018,2m,226,5,0
+9113,Perquenco,2018,2m,214,1,0
+9116,Saavedra,2018,2m,221,13,0
+9119,Vilcún,2018,2m,232,6,0
+9121,Cholchol,2018,2m,216,-5,0
+9104,Curarrehue,2018,2m,215,0,0
+9105,Freire,2018,2m,218,4,0
+9102,Carahue,2018,2m,228,15,1
+9103,Cunco,2018,2m,234,5,0
+9106,Galvarino,2018,2m,214,10,0
+9108,Lautaro,2018,2m,219,4,0
+9110,Melipeuco,2018,2m,238,11,0
+9111,Nueva Imperial,2018,2m,225,2,0
+9207,Lumaco,2018,2m,217,13,0
+9208,Purén,2018,2m,235,2,0
+9209,Renaico,2018,2m,215,2,0
+9210,Traiguén,2018,2m,222,-3,0
+9211,Victoria,2018,2m,233,6,0
+9101,Temuco,2018,2m,253,2,0
+10101,Puerto Montt,2018,2m,241,3,0
+10102,Calbuco,2018,2m,228,0,0
+10103,Cochamó,2018,2m,234,18,1
+10104,Fresia,2018,2m,223,-4,0
+10105,Frutillar,2018,2m,231,-2,0
+10106,Los Muermos,2018,2m,234,9,0
+10305,Río Negro,2018,2m,236,10,1
+10306,San Juan de la Costa,2018,2m,216,7,0
+10307,San Pablo,2018,2m,223,7,0
+10401,Chaitén,2018,2m,229,-14,0
+10402,Futaleufú,2018,2m,257,23,1
+10404,Palena,2018,2m,236,-1,0
+10209,Quemchi,2018,2m,225,16,0
+10210,Quinchao,2018,2m,240,-1,0
+10301,Osorno,2018,2m,251,7,1
+10302,Puerto Octay,2018,2m,221,5,0
+10303,Purranque,2018,2m,238,8,0
+10304,Puyehue,2018,2m,235,5,0
+10203,Chonchi,2018,2m,224,10,1
+10204,Curaco de Vélez,2018,2m,226,-5,0
+10205,Dalcahue,2018,2m,198,-9,0
+10206,Puqueldón,2018,2m,NA,NA,NA
+10207,Queilén,2018,2m,219,1,0
+10208,Quellón,2018,2m,238,12,1
+10107,Llanquihue,2018,2m,210,-2,0
+10108,Maullín,2018,2m,225,13,1
+10109,Puerto Varas,2018,2m,254,7,0
+10403,Hualaihué,2018,2m,234,1,0
+10201,Castro,2018,2m,247,6,0
+10202,Ancud,2018,2m,235,-3,0
+11101,Coyhaique,2018,2m,241,0,0
+11102,Lago Verde,2018,2m,NA,NA,NA
+11201,Aysén,2018,2m,241,0,0
+11202,Cisnes,2018,2m,223,-5,0
+11203,Guaitecas,2018,2m,224,1,0
+11301,Cochrane,2018,2m,243,25,1
+11302,O'higgins,2018,2m,NA,NA,NA
+11303,Tortel,2018,2m,NA,NA,NA
+11401,Chile Chico,2018,2m,239,1,0
+11402,Río Ibáñez,2018,2m,217,9,0
+12101,Punta Arenas,2018,2m,244,4,0
+12102,Laguna Blanca,2018,2m,NA,NA,NA
+12103,Río Verde,2018,2m,NA,NA,NA
+12104,San Gregorio,2018,2m,NA,NA,NA
+12201,Cabo de Hornos,2018,2m,261,41,1
+12202,Antártica,2018,2m,NA,NA,NA
+12301,Porvenir,2018,2m,228,8,0
+12302,Primavera,2018,2m,NA,NA,NA
+12303,Timaukel,2018,2m,NA,NA,NA
+12401,Natales,2018,2m,239,10,1
+12402,Torres del Paine,2018,2m,NA,NA,NA
+13101,Santiago,2018,2m,248,-3,0
+13121,Pedro Aguirre Cerda,2018,2m,235,1,0
+13129,San Joaquín,2018,2m,220,-2,0
+13130,San Miguel,2018,2m,237,3,0
+13105,El Bosque,2018,2m,236,-8,-1
+13109,La Cisterna,2018,2m,230,-3,0
+13127,Recoleta,2018,2m,238,2,0
+13301,Colina,2018,2m,252,-3,0
+13302,Lampa,2018,2m,228,-2,0
+13303,Tiltil,2018,2m,228,7,0
+13202,Pirque,2018,2m,229,-1,0
+13203,San José de Maipo,2018,2m,224,-3,0
+13104,Conchalí,2018,2m,225,4,0
+13107,Huechuraba,2018,2m,266,6,0
+13108,Independencia,2018,2m,233,-2,0
+13125,Quilicura,2018,2m,245,3,0
+13603,Isla de Maipo,2018,2m,239,10,1
+13604,Padre Hurtado,2018,2m,230,-1,0
+13605,Peñaflor,2018,2m,232,2,0
+13110,La Florida,2018,2m,247,0,0
+13112,La Pintana,2018,2m,230,-2,0
+13201,Puente Alto,2018,2m,246,1,0
+13502,Alhué,2018,2m,217,7,0
+13503,Curacaví,2018,2m,225,-9,0
+13504,María Pinto,2018,2m,218,14,1
+13505,San Pedro,2018,2m,210,-7,0
+13601,Talagante,2018,2m,243,0,0
+13602,El Monte,2018,2m,233,14,1
+13117,Lo Prado,2018,2m,220,-1,0
+13119,Maipú,2018,2m,251,1,0
+13124,Pudahuel,2018,2m,233,4,0
+13126,Quinta Normal,2018,2m,223,-6,0
+13128,Renca,2018,2m,239,-1,0
+13501,Melipilla,2018,2m,234,2,0
+13122,Peñalolén,2018,2m,253,2,0
+13123,Providencia,2018,2m,269,-11,-1
+13132,Vitacura,2018,2m,287,-14,-1
+13102,Cerrillos,2018,2m,234,-4,0
+13103,Cerro Navia,2018,2m,215,-8,0
+13106,Estación Central,2018,2m,236,4,0
+13404,Paine,2018,2m,239,3,0
+13113,La Reina,2018,2m,274,-4,0
+13114,Las Condes,2018,2m,280,-7,0
+13115,Lo Barnechea,2018,2m,278,-7,-1
+13118,Macul,2018,2m,246,-1,0
+13120,Ñuñoa,2018,2m,248,-3,0
+13111,La granja,2018,2m,233,-1,0
+13116,Lo Espejo,2018,2m,234,6,0
+13131,San Ramón,2018,2m,227,2,0
+13401,San Bernardo,2018,2m,238,5,0
+13402,Buin,2018,2m,239,-4,0
+13403,Calera de Tango,2018,2m,255,-6,0
+14101,Valdivia,2018,2m,248,2,0
+14102,Corral,2018,2m,222,-4,0
+14103,Lanco,2018,2m,219,-4,0
+14104,Los Lagos,2018,2m,212,-5,0
+14105,Máfil,2018,2m,230,7,0
+14106,Mariquina,2018,2m,240,-9,-1
+14107,Paillaco,2018,2m,237,9,0
+14108,Panguipulli,2018,2m,234,4,0
+14201,La Unión,2018,2m,246,11,1
+14202,Futrono,2018,2m,223,3,0
+14203,Lago Ranco,2018,2m,245,4,0
+14204,Río Bueno,2018,2m,239,7,0
+15101,Arica,2018,2m,240,3,0
+15102,Camarones,2018,2m,201,0,0
+15201,Putre,2018,2m,223,14,0
+15202,General Lagos,2018,2m,NA,NA,NA
+16101,Chillán,2018,2m,245,3,0
+16102,Bulnes,2018,2m,236,5,0
+16103,Chillán Viejo,2018,2m,230,10,0
+16104,El Carmen,2018,2m,222,-12,-1
+16105,Pemuco,2018,2m,204,-10,0
+16106,Pinto,2018,2m,218,-9,0
+16201,Quirihue,2018,2m,250,6,0
+16202,Cobquecura,2018,2m,209,-3,0
+16203,Coelemu,2018,2m,240,8,0
+16207,Treguaco,2018,2m,222,4,0
+16301,San Carlos,2018,2m,247,8,1
+16302,Coihueco,2018,2m,232,-8,0
+16107,Quillón,2018,2m,228,9,0
+16108,San Ignacio,2018,2m,227,4,0
+16109,Yungay,2018,2m,245,0,0
+16303,Ñiquén,2018,2m,213,0,0
+16304,San Fabián,2018,2m,228,-22,-1
+16305,San Nicolás,2018,2m,282,9,1
+16204,Ninhue,2018,2m,230,11,0
+16205,Portezuelo,2018,2m,213,-15,-1
+16206,Ránquil,2018,2m,226,17,1

@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Seleccionar Categoria para editar</nb-card-header>
+            <nb-card-body>
+                
+                    
+                    
+                    <nb-select fullWidth id="categoria" [(selected)]="selectedCategoria" placeholder="Categoría a editar." (selectedChange)="categoriaSeleccionada($event)">
+                                    
+                        <nb-option value="{{categoria.id_categoria}}" *ngFor="let categoria of categorias" >{{categoria.nombre}}</nb-option>
+
+                    </nb-select>
+                    <ng-container *ngIf="categoriaSelect !== ''">
+                        <nb-form-field>
+                            <ng-container *ngIf="admin">
+                                <br>
+                                <button style="padding:0%" nbButton ghost status="danger" (click)="deleteCategoria()">
+                                    <nb-icon icon="trash-2-outline" pack="eva">
+            
+                                    </nb-icon>
+                                    Eliminar Categoria
+                                </button>
+                            </ng-container>
+                            
+                            <br>
+                            <br>
+                            <form [formGroup]="firstFormGroup" class="step-container" autocomplete="off">
+                                <p> <u>Nombre actual:</u>  <b> {{categoriaSelect}}</b> </p> 
+                                
+                                <label for="inputNombre"  class="label">Nuevo nombre de categoria</label>
+                                <input type="text" nbInput fullWidth placeholder="Nuevo Nombre" formControlName="nombre" id = "inputNombre" (change)="changeName($event)">
+                                <br>
+                                <br>
+                                <button nbButton status="primary" (click)="registrarCambios()">
+                                    <nb-icon icon="save-outline" pack="eva">
+    
+                                    </nb-icon>
+                                    Registrar cambios
+                                </button>
+                            </form>
+
+                            
+                        </nb-form-field>
+                    </ng-container>
+                
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

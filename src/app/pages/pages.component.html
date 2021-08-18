@@ -1,0 +1,15 @@
+<ng-container *ngIf="adminMode">
+    <ngx-one-column-layout>
+        <nb-menu [items]="menu"></nb-menu>
+        <router-outlet></router-outlet>
+      </ngx-one-column-layout>
+</ng-container>
+
+
+<ng-container *ngIf="!adminMode">
+    <ngx-one-column-layout>
+        <nb-menu [items]="menu2"></nb-menu>
+        <router-outlet></router-outlet>
+      </ngx-one-column-layout>
+</ng-container>
+

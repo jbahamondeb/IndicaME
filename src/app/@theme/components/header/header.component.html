@@ -1,0 +1,109 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <nb-icon icon="menu-2-outline"></nb-icon>
+    </a>
+    <a class="logo" href="#" (click)="navigateHome()">IndicaMe</a>
+  </div>
+  
+</div>
+
+<ng-container *ngIf="loggedIn">
+  <div class="header-container">
+    <div class="exit">
+      <button  ghost nbButton (click)="cerrarSesion()">
+        <nb-icon icon="corner-down-left-outline" pack="eva">
+  
+        </nb-icon>
+        Cerrar sesión
+      </button>
+    </div>
+   
+    <ng-container *ngIf="admin">
+      
+        <div class="badge">
+          <button ghost nbButton (click)="getSolicitudes()" style="position: relative;">
+            <nb-badge text="{{badgeText}}" status="danger" position="top right"></nb-badge>
+            <nb-icon icon="bell-outline" pack="eva" >
+              
+            </nb-icon>
+            
+          </button>
+        </div>
+        
+      
+
+      
+    </ng-container>
+   
+    <nb-actions size="small">
+  
+      <!--
+      <ng-container *ngIf="admin">
+        <nb-action class="control-item" icon="bell-outline"></nb-action>
+      </ng-container>
+      -->
+     
+        <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+          <nb-user (click)="menuClick()"
+                   [onlyPicture]="userPictureOnly"
+                   [name]="name_user"
+                   >
+          </nb-user>
+        </nb-action>
+     
+     
+    </nb-actions>
+
+    
+
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!loggedIn">
+  <div class="header-container">
+
+      <button ghost nbButton (click)="registrarse()">
+        <nb-icon icon="external-link-outline" pack="eva">
+
+        </nb-icon>
+        Unirse al proyecto
+      </button>
+
+    
+      <button ghost nbButton (click)="logearse()">
+        <nb-icon icon="power-outline" pack="eva">
+  
+        </nb-icon>
+        Iniciar sesión
+      </button>
+      
+
+
+   
+    
+   
+  </div>
+
+
+
+</ng-container>
+
+
+<!--
+<div class="header-container">
+  <nb-actions size="small">
+
+    
+    <nb-action class="control-item" icon="bell-outline"></nb-action>
+    <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+      <nb-user [nbContextMenu]="userMenu"
+               [onlyPicture]="userPictureOnly"
+               [name]="user?.name"
+               [picture]="user?.picture">
+      </nb-user>
+    </nb-action>
+  </nb-actions>
+</div>
+
+-->

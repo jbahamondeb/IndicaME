@@ -1,0 +1,213 @@
+
+<!--
+<nb-card>
+    <nb-card-body>
+        <nb-stepper #stepper [linear]="true">
+            <nb-step [stepControl]="firstFormGroup" label="Información básica del archivo.">
+                <p>
+                    Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                </p>
+                <button nbButton nbStepperNext>Siguiente</button>
+            </nb-step>
+            
+            <nb-step [stepControl]="secondFormGroup" label="Nombre de columnas del archivo..">
+                <p>
+                    jelou
+                </p>
+                <button nbButton nbStepperPrevious>Atrás</button>
+              <button nbButton nbStepperNext>Siguiente</button>
+            </nb-step>
+    
+            <nb-step [stepControl]="thirdFormGroup" label="Terminado.">
+                <p>
+                    Mademoiselle
+                </p>
+               
+                <button nbButton nbStepperPrevious>Atrás</button>
+            </nb-step>
+    
+    
+        </nb-stepper>
+    </nb-card-body>
+    
+</nb-card>
+-->
+
+<!--
+<div class="card model-full">>
+
+    <div class="card-body">
+        <nb-card>
+            <nb-card-body>
+                <nb-stepper #stepper [linear]="true">
+                    <nb-step [stepControl]="firstFormGroup" label="Información básica \n del archivo.">
+                        <p>
+                            Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                        </p>
+                        <button nbButton nbStepperNext>Siguiente</button>
+                    </nb-step>
+                    
+                    <nb-step [stepControl]="secondFormGroup" label="Nombre de columnas del archivo..">
+                        <p>
+                            jelou
+                        </p>
+                        <button nbButton nbStepperPrevious>Atrás</button>
+                      <button nbButton nbStepperNext>Siguiente</button>
+                    </nb-step>
+            
+                    <nb-step [stepControl]="thirdFormGroup" label="Terminado.">
+                        <p>
+                            Mademoiselle
+                        </p>
+                       
+                        <button nbButton nbStepperPrevious>Atrás</button>
+                    </nb-step>
+            
+            
+                </nb-stepper>
+            </nb-card-body>
+            
+        </nb-card>
+    </div>
+
+  </div>
+-->
+<ng-container *ngIf="dialog">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <ng-container *ngIf="!flag">
+                    <div class="close">
+                        <button nbButton ghost><nb-icon icon="close-outline" pack="eva" (click)="cerrarDialog()"></nb-icon></button>
+                    </div>
+                </ng-container>
+                
+                <nb-card-body>
+                    
+                    <nb-stepper #stepper [linear]="true" disableStepNavigation>
+                        <nb-step [stepControl]="firstFormGroup" label="Información archivo">
+                            <nb-form-field>
+                                <form [formGroup]="firstFormGroup" class="step-container" autocomplete="off">
+                                    <label for="inputGranularidad"  class="label">Tipo de granularidad mínima</label>
+                                    <nb-select fullWidth id="inputGranularidad" [(selected)]="selectedGranularidad" placeholder="Granularidad" formControlName="granularidad">
+    
+                                        <nb-option value="1">Región</nb-option>
+                                        <nb-option value="2">Provincia</nb-option>
+                                        <nb-option value="3">Comuna</nb-option>
+                                    </nb-select>
+    
+                                    <label for="inputYears"  class="label">Años presentes en el indicador.</label>
+                                    <nb-radio-group id="inputYears" [(value)]="radioGroupValue" (valueChange)="onChangeAnyo($event)">
+                                        <nb-radio
+                                        [value]="1">
+                                        Histórico/Intervalo
+                                        </nb-radio>
+                                        
+                                        <nb-radio
+                                        [value]="2">
+                                            Un solo año
+                                        </nb-radio>
+                                        <nb-radio
+                                        [value]="3">
+                                            Más de un año
+                                        </nb-radio>
+                                    </nb-radio-group>
+        
+                                    <ng-container *ngIf="anyoMinimo == 1">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="number" nbInput fullWidth placeholder="Año inicio"  formControlName="anyo_in" autocomplete="off">
+                                            </div>
+                                            
+                                            <div class="col-sm-6">
+                                                
+                                                <input type="number" nbInput fullWidth placeholder="Año fin"  formControlName="anyo_fin" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        
+                                    </ng-container>
+    
+                                    <ng-container *ngIf="anyoMinimo == 2">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <input type="number" nbInput fullWidth placeholder="Año" formControlName="anyo_solo" autocomplete="off">
+                                            </div>
+                                        </div>
+                                        
+                                    </ng-container>
+    
+                                    
+                                    <br>
+                                    <button nbButton nbStepperNext (click) = "onSubmit1()">Siguiente</button>
+                                </form>
+                            </nb-form-field>
+                          
+                            
+                        </nb-step>
+                        
+                        <nb-step [stepControl]="secondFormGroup" label="Nombre columnas del archivo.">
+                            <nb-form-field>
+                                <form [formGroup]="secondFormGroup" class="step-container" autocomplete="off">
+                                    
+                                    <ng-container>
+                                        <label for="columnaGranularidad"  class="label">Columna de granularidad</label>
+                                        <input id="columnaGranularidad" type="text" nbInput fullWidth placeholder="Ingrese nombre exacto de columna granularidad." formControlName="campoGranularidad" autocomplete="off">
+                                    </ng-container>
+                                 
+                                        
+                                   
+                                        
+                                        
+                                   
+    
+                                    <ng-container *ngIf="moreyears">
+                                        <label for="columnaYears"  class="label">Columna de tiempo.</label>
+                                        
+                                            
+                                                <input id="columnaYears" type="text" nbInput fullWidth placeholder="Ingrese nombre exacto de columna temporal." formControlName="campoFecha" autocomplete="off">
+                                            
+                                        
+                                    </ng-container>
+                                    <br>
+                                    <br>
+                                    <input formControlName="archivo" name='archivo' type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" (change)="onFileChangeChecker($event)" required>  
+                                    <ng-container *ngIf="!cantNext">
+                                        <p style="color: red;">Nombre de archivo ya en uso.</p>
+                                    </ng-container>
+                                    
+                          
+                                    <br>
+    
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <button nbButton nbStepperPrevious (click)="atras()">Atrás</button>
+                                        </div>
+    
+                                        <div class="col-sm-6">
+                                            <button nbButton nbStepperNext (click)="processFile()">Siguiente</button>
+                                        </div>
+                                    </div>
+                                       
+                                        
+                                  
+                                  
+                                </form>
+                            </nb-form-field>
+                            
+                        </nb-step>
+                
+                        <nb-step [stepControl]="thirdFormGroup" label="Terminado."  [completed]="indirectTasksHasCompleted()"
+                        [stepControl]="{valid: indirectTasksHasCompleted(), reset: null}">
+    
+                            
+                        </nb-step>
+                
+                
+                    </nb-stepper>
+                </nb-card-body>
+                
+            </nb-card>
+        </div>
+    
+    </div>
+</ng-container>

@@ -1,0 +1,160 @@
+
+<div class="row">
+    <div class="col-xxl-12">
+        
+        <div class="granularidades">
+            <nb-card>
+                <nb-card-header>N° de Indicadores por categoria.</nb-card-header>
+                <nb-card-body>
+            
+            
+            
+                <nb-tabset fullWidth (changeTab)="changeTab($event)">
+                  
+                    <nb-tab tabTitle="Regiones">
+                    
+                            
+                        
+                            
+                            </nb-tab>
+                        <nb-tab tabTitle="Provincias">
+                            
+                            
+                            </nb-tab>
+                            <nb-tab tabTitle="Comunas">
+                            
+                            </nb-tab>
+                </nb-tabset>
+                
+            
+            
+                  
+                </nb-card-body>
+              </nb-card>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+    
+
+
+
+   <ngx-map-and-graphic [seleccionado]="tabSeleccionada"></ngx-map-and-graphic> 
+
+   <ngx-country-orders-map2 [seleccionado]="tabSeleccionada"></ngx-country-orders-map2>
+
+    <!--
+    <nb-card >
+        <nb-card-body>
+            <div class="wrapper">
+
+                <div class="medio">
+                    <ngx-country-orders-map (select)="selectCountryById($event)"
+                countryId="13" [seleccionado]="tabSeleccionada" >
+                </ngx-country-orders-map>
+                </div>
+                
+                <div class="medio">
+                    <ngx-country-orders-chart [countryName]="regionName"
+                        [data]="countryData"
+                        [labels]="categoriesNames"
+                        maxValue="20" [seleccionado]="tabSeleccionada"> </ngx-country-orders-chart>
+                </div>
+        
+                
+        
+                
+            </div>
+        </nb-card-body>
+        
+    </nb-card>
+    -->
+    
+
+    <!--
+    <ngx-country-orders-chart [countryName]="regionName"
+    [data]="countryData"
+    [labels]="categoriesNames"
+    maxValue="20" >
+
+
+    </ngx-country-orders-chart>
+    -->
+    <!--  
+    <ng-container *ngIf="region">
+       
+        <nb-card>
+            <nb-card-body>
+                <ngx-country-orders-map (select)="selectCountryById($event)"
+                countryId="13">
+
+
+
+                </ngx-country-orders-map>
+
+                <ngx-country-orders-chart [countryName]="regionName"
+                [data]="countryData"
+                [labels]="categoriesNames"
+                maxValue="20" >
+
+
+                </ngx-country-orders-chart>
+            </nb-card-body>
+        </nb-card>
+
+        
+        
+    </ng-container>
+
+    <ng-container *ngIf="provincia">
+        <nb-card>
+            <nb-card-body>
+                <ngx-country-orders-provincia-map (select)="selectCountryById2($event)"
+            countryId="131" >
+
+
+
+            </ngx-country-orders-provincia-map>
+
+            <ngx-country-orders-provincia-chart
+                  [countryName]="provinciaName"
+                  [data]="countryData2"
+                  [labels]="categoriesNames"
+                  maxValue="20">
+
+
+            </ngx-country-orders-provincia-chart>
+            </nb-card-body>
+        </nb-card>
+    </ng-container>
+
+
+    <ng-container *ngIf="comuna">
+        <nb-card>
+            <nb-card-body>
+                <ngx-country-orders-comuna-map (select)="selectCountryById3($event)"
+            countryId="13101" >
+            
+
+            
+            </ngx-country-orders-comuna-map>
+            <ngx-country-orders-comuna-chart
+                  [countryName]="comunaName"
+                  [data]="countryData3"
+                  [labels]="categoriesNames"
+                  maxValue="20">
+
+
+            </ngx-country-orders-comuna-chart>
+            </nb-card-body>
+        </nb-card>
+    </ng-container>
+    -->
+    
+
+ 
+    
+   

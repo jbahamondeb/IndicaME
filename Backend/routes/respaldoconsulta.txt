@@ -1,0 +1,182 @@
+let csvstream = fastcsv.parseFile(path, { headers: true, delimiter: separator2})
+                    .on("data", function (data) {
+                        csvstream.pause();
+                        let dato_granularidad = data[campoGranularidad]
+                        if(typeof dato_granularidad === 'undefined'){
+                            return res.status(400).json({
+                                ok: false,
+                                msg: 'El nombre del campo no está en el archivo.'
+                            });
+                        }
+                        var identificador;
+
+                        if(!setGranularidades.has(dato_granularidad)){
+                            console.log("Identificador no está en mapa")
+                            setGranularidades.add(dato_granularidad)
+                            console.log("Añadido en mapa")
+                            let select_query;
+                            if(granularidadDBB == 1){
+                                select_query = 
+                                `
+                                select *, similarity(nombre, $1) as similaridad
+                                from region
+                                order by similaridad desc
+                                limit 1
+                                            
+                                
+                                `
+                            }else if(granularidadDBB == 2){
+                                select_query = 
+                                `
+                                select *, similarity(nombre, $1) as similaridad
+                                from provincia
+                                order by similaridad desc
+                                limit 1
+                                            
+                                
+                                `
+                            }else if(granularidadDBB == 3){
+                                select_query = 
+                                `
+                                select *, similarity(nombre, $1) as similaridad
+                                from comuna
+                                order by similaridad desc
+                                limit 1
+                                            
+                                
+                                `
+                            }
+
+                            client.query(select_query,[dato_granularidad],async (err,result)=>{
+                                console.log(select_query)
+                                if (err) {
+                                    console.log("err")
+                                    console.log(err)
+                                    return res.status(400).json({
+                                        ok: false,
+                                        err
+                                    });
+                                }else{
+                                    console.log("Select_query")
+                                    identificador = result.rows[0].cod 
+                                    console.log("Identificador de granularidad encontrado")
+                                    mapaGranularidades.set(dato_granularidad,identificador);
+
+                                   
+                                    var insert_query2;
+                                    var insert_year;
+                                    if(hasMoreYears){
+                                        insert_year = data[campoFecha]
+                                        if(typeof insert_year === 'undefined'){
+                                            return res.status(400).json({
+                                                ok: false,
+                                                msg: 'El nombre del campo no está en el archivo.'
+                                            });
+                                        }
+                                    }else{
+                                        insert_year = anyo
+                                    }
+                                    if(granularidadDBB == 1){
+
+
+                                        insert_query2 =
+                                        `
+                                            INSERT INTO indicadorarchivoregion(id_indicador, id_archivo, anyo, id_region) values($1, $2, $3, $4) 
+                                        `
+
+
+                                    }else if(granularidadDBB == 2){
+                                        insert_query2 =
+                                        `
+                                        INSERT INTO indicadorarchivoprovincia(id_indicador, id_archivo, anyo, id_provincia) values($1, $2, $3, $4) 
+                                        `
+                                    }else if(granularidadDBB == 3){
+                                        insert_query2 =
+                                        `
+                                        INSERT INTO indicadorarchivoregion(id_indicador, id_archivo, anyo, id_comuna) values($1, $2, $3, $4) 
+                                        `
+                                    }
+                                    console.log("Insertando granularidad y documento. El identificador no existia en el mapa")
+                                     client.query(insert_query2,[id_indicador, id_archivo, insert_year, identificador], async (err3,result3)=>{
+                                        
+                                        if (err3) {
+                                            console.log("err3 version 1")
+                                            console.log(err3)
+                                            return res.status(400).json({
+                                                ok: false,
+                                                err3
+                                            });
+                                        }else{
+                                            console.log("insertquery2 version 1")
+                                        }
+                                    })
+                                            
+                                    
+                                }
+
+                            })
+                        }else{
+                            console.log("El identificador ya está en el mapa")
+                            identificador = mapaGranularidades[dato_granularidad]   
+                            console.log("Identificador ", identificador)
+
+                            var insert_query2;
+                            var insert_year;
+                            if(hasMoreYears){
+                                insert_year = data[campoFecha]
+                                if(typeof insert_year === 'undefined'){
+                                    console.log("WTF2")
+                                    return res.status(400).json({
+                                        ok: false,
+                                        msg: 'El nombre del campo no está en el archivo.'
+                                    });
+                                }
+                            }else{
+                                insert_year = anyo
+                            }
+                            if(granularidadDBB == 1){
+
+
+                                insert_query2 =
+                                `
+                                    INSERT INTO indicadorarchivoregion(id_indicador, id_archivo, anyo, id_region) values($1, $2, $3, $4) 
+                                `
+
+
+                            }else if(granularidadDBB == 2){
+                                insert_query2 =
+                                `
+                                INSERT INTO indicadorarchivoprovincia(id_indicador, id_archivo, anyo, id_provincia) values($1, $2, $3, $4) 
+                                `
+                            }else if(granularidadDBB == 3){
+                                insert_query2 =
+                                `
+                                INSERT INTO indicadorarchivoregion(id_indicador, id_archivo, anyo, id_comuna) values($1, $2, $3, $4) 
+                                `
+                            }
+
+                            
+                            console.log("Insertando granularidad y documento. El identificador ya existia en el mapa")
+                             client.query(insert_query2,[id_indicador, id_archivo, insert_year, identificador], async (err3,result3)=>{
+                                console.log(insert_query2)
+                                if (err3) {
+                                    console.log("err3 version 2")
+                                    console.log(err3)
+                                    return res.status(400).json({
+                                        ok: false,
+                                        err3
+                                    });
+                                }else{
+                                    console.log("insertquery2 version 2")
+                                }
+                            })
+
+                        }
+                        csvstream.resume();
+                    })
+                    .on("end", function () {
+                        console.log("We are done!")
+                    })
+                    .on("error", function (error) {
+                        console.log(error)
+                    });

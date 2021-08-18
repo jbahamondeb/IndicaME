@@ -1,0 +1,338 @@
+[
+  {
+    "nombre": "Antofagasta",
+    "id": "021",
+    "latitud": -24.5646,
+    "longitud": -69.2877
+  },
+  {
+    "nombre": "Arica",
+    "id": 151,
+    "latitud": -18.7139,
+    "longitud": -69.7522
+  },
+  {
+    "nombre": "Chañaral",
+    "id": "032",
+    "latitud": -26.3599,
+    "longitud": -70.5981
+  },
+  {
+    "nombre": "Copiapó",
+    "id": "031",
+    "latitud": -27.5765,
+    "longitud": -70.0269
+  },
+  {
+    "nombre": "El Loa",
+    "id": "022",
+    "latitud": -22.3196,
+    "longitud": -68.5107
+  },
+  {
+    "nombre": "Huasco",
+    "id": "033",
+    "latitud": -28.5604,
+    "longitud": -70.6146
+  },
+  {
+    "nombre": "Parinacota",
+    "id": 152,
+    "latitud": -18.3135,
+    "longitud": -69.3788
+  },
+  {
+    "nombre": "Tocopilla",
+    "id": "023",
+    "latitud": -22.2306,
+    "longitud": -69.4666
+  },
+  {
+    "nombre": "Antártica Chilena",
+    "id": 122,
+    "latitud": -55.028,
+    "longitud": -67.6318
+  },
+  {
+    "nombre": "Capitán Prat",
+    "id": 113,
+    "latitud": -47.9232,
+    "longitud": -72.9245
+  },
+  {
+    "nombre": "Magallanes",
+    "id": 121,
+    "latitud": -53.6316,
+    "longitud": -71.5924
+  },
+  {
+    "nombre": "Tierra del Fuego",
+    "id": 123,
+    "latitud": -53.7422,
+    "longitud": -69.2249
+  },
+  {
+    "nombre": "Ultima Esperanza",
+    "id": 124,
+    "latitud": -51.0163,
+    "longitud": -73.4285
+  },
+  {
+    "nombre": "Isla de Pascua",
+    "id": "052",
+    "latitud": -27.112723,
+    "longitud": -109.3496865
+  },
+  {
+    "nombre": "Valparaíso",
+    "id": "051",
+    "latitud": -33.1381,
+    "longitud": -71.5617
+  },
+  {
+    "nombre": "Cachapoal",
+    "id": "061",
+    "latitud": -36.45,
+    "longitud": -71.7333
+  },
+  {
+    "nombre": "Cardenal Caro",
+    "id": "062",
+    "latitud": -34.2812,
+    "longitud": -71.8571
+  },
+  {
+    "nombre": "Chacabuco",
+    "id": 133,
+    "latitud": -33.1503,
+    "longitud": -70.7132
+  },
+  {
+    "nombre": "Choapa",
+    "id": "042",
+    "latitud": -31.8006,
+    "longitud": -70.9827
+  },
+  {
+    "nombre": "Colchagua",
+    "id": "063",
+    "latitud": -34.6761,
+    "longitud": -71.0973
+  },
+  {
+    "nombre": "Cordillera",
+    "id": 132,
+    "latitud": -33.6984,
+    "longitud": -70.1682
+  },
+  {
+    "nombre": "Curicó",
+    "id": "073",
+    "latitud": -35.1704,
+    "longitud": -70.8954
+  },
+  {
+    "nombre": "Elqui",
+    "id": "041",
+    "latitud": -29.8335,
+    "longitud": -70.8014
+  },
+  {
+    "nombre": "Limarí",
+    "id": "043",
+    "latitud": -30.7342,
+    "longitud": -70.9957
+  },
+  {
+    "nombre": "Los Andes",
+    "id": "053",
+    "latitud": -32.9544,
+    "longitud": -70.3163
+  },
+  {
+    "nombre": "Maipo",
+    "id": 134,
+    "latitud": -33.7963,
+    "longitud": -70.7353
+  },
+  {
+    "nombre": "Marga Marga",
+    "id": "058",
+    "latitud": -33.065,
+    "longitud": -71.3711
+  },
+  {
+    "nombre": "Melipilla",
+    "id": 135,
+    "latitud": -33.7369,
+    "longitud": -71.1743
+  },
+  {
+    "nombre": "Petorca",
+    "id": "054",
+    "latitud": -32.1965,
+    "longitud": -70.8318
+  },
+  {
+    "nombre": "Quillota",
+    "id": "055",
+    "latitud": -32.9009,
+    "longitud": -71.2947
+  },
+  {
+    "nombre": "San Antonio",
+    "id": "056",
+    "latitud": -33.6648,
+    "longitud": -71.4597
+  },
+  {
+    "nombre": "San Felipe",
+    "id": "057",
+    "latitud": -32.7464,
+    "longitud": -70.7489
+  },
+  {
+    "nombre": "Santiago",
+    "id": 131,
+    "latitud": -33.4417,
+    "longitud": -70.6541
+  },
+  {
+    "nombre": "Talagante",
+    "id": 136,
+    "latitud": -33.6665,
+    "longitud": -70.9331
+  },
+  {
+    "nombre": "Arauco",
+    "id": "082",
+    "latitud": -37.7277,
+    "longitud": -73.3075
+  },
+  {
+    "nombre": "Bío-Bío",
+    "id": "083",
+    "latitud": -37.4739,
+    "longitud": -72.1572
+  },
+  {
+    "nombre": "Cauquenes",
+    "id": "072",
+    "latitud": -35.9738,
+    "longitud": -72.3142
+  },
+  {
+    "nombre": "Cautín",
+    "id": "091",
+    "latitud": -38.727,
+    "longitud": -72.5989
+  },
+  {
+    "nombre": "Itata",
+    "id": 162,
+    "latitud": -36.7639335,
+    "longitud": -72.4491456
+  },
+  {
+    "nombre": "Linares",
+    "id": "074",
+    "latitud": -35.8495,
+    "longitud": -71.585
+  },
+  {
+    "nombre": "Malleco",
+    "id": "092",
+    "latitud": -37.803,
+    "longitud": -72.7017
+  },
+  {
+    "nombre": "Diguillín",
+    "id": 161,
+    "latitud": -36.866667,
+    "longitud": -72.28333300000001
+  },
+  {
+    "nombre": "Osorno",
+    "id": 103,
+    "latitud": -40.7369,
+    "longitud": -72.9849
+  },
+  {
+    "nombre": "Punilla",
+    "id": 163,
+    "latitud": -35.675147,
+    "longitud": -71.542969
+  },
+  {
+    "nombre": "Ranco",
+    "id": 142,
+    "latitud": -40.4114,
+    "longitud": -72.4988
+  },
+  {
+    "nombre": "Talca",
+    "id": "071",
+    "latitud": -35.3921,
+    "longitud": -71.6125
+  },
+  {
+    "nombre": "Valdivia",
+    "id": 141,
+    "latitud": -39.7811,
+    "longitud": -72.5098
+  },
+  {
+    "nombre": "Aysén",
+    "id": 112,
+    "latitud": -46.3848,
+    "longitud": -72.2955
+  },
+  {
+    "nombre": "Chiloe",
+    "id": 102,
+    "latitud": -43.117,
+    "longitud": -73.9984
+  },
+  {
+    "nombre": "Coyhaique",
+    "id": 111,
+    "latitud": -45.2865,
+    "longitud": -71.7792
+  },
+  {
+    "nombre": "Llanquihue",
+    "id": 101,
+    "latitud": -41.453,
+    "longitud": -72.6135
+  },
+  {
+    "nombre": "Palena",
+    "id": 104,
+    "latitud": -43.4449,
+    "longitud": -72.0923
+  },
+  {
+    "nombre": "General Carrera",
+    "id": 114,
+    "latitud": -46.557,
+    "longitud": -72.4123
+  },
+  {
+    "nombre": "Iquique",
+    "id": "011",
+    "latitud": -20.8011,
+    "longitud": -70.0963
+  },
+  {
+    "nombre": "Tamarugal",
+    "id": "014",
+    "latitud": -39.8567,
+    "longitud": -72.6089
+  },
+  {
+    "nombre": "Concepción",
+    "id": "081",
+    "latitud": -36.8148,
+    "longitud": -73.0293
+  }
+]

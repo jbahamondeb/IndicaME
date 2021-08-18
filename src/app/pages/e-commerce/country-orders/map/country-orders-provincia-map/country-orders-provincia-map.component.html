@@ -1,0 +1,34 @@
+
+<!--
+<div leaflet [leafletOptions]="options" [leafletLayers]="layers" (leafletMapReady)="mapReady($event)"></div>
+-->
+
+
+<div id="mapa2" class="mapa">
+    <input
+        [ngModel]="value"
+        (ngModelChange)="onModelChange($event)"
+        nbInput
+        type="text"
+        placeholder="Busca una provincia"
+        [nbAutocomplete]="autoNgModel"/>
+
+
+        <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+            <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                {{ option }}
+              </nb-option>
+        </nb-autocomplete>
+
+
+    
+        <button nbButton ghost (click)="toggleShowLayer()">
+            <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                pack="eva"
+                [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+               >
+            </nb-icon>
+        </button>
+    
+    
+</div>

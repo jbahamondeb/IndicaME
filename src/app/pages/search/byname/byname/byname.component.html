@@ -1,0 +1,169 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Buscar indicador por nombre</nb-card-header>
+            <nb-card-body>
+                <nb-form-field>
+
+                
+                <input
+                    [ngModel]="value"
+                    (ngModelChange)="onModelChange($event)"
+                    nbInput
+                    type="text"
+                    placeholder="Busca un indicador por su nombre..."
+                    [nbAutocomplete]="autoNgModel" fullWidth id="indicador" autocomplete="off"/>
+                
+                
+               
+                <nb-autocomplete #autoNgModel>
+                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                        {{ option }}
+                      </nb-option>
+                </nb-autocomplete>
+                <button nbButton nbSuffix status="primary" (click)="searchByName()"><nb-icon icon="search-outline" ></nb-icon>Buscar</button>
+                
+                </nb-form-field>  
+   
+                        
+                
+                    
+               
+                 
+
+                      
+                    
+                
+            </nb-card-body>
+        </nb-card>
+        
+    </div>
+
+
+</div>
+
+<ng-container *ngIf="indicadoresEncontrados?.length>0">
+
+    <nb-accordion>
+        <nb-accordion-item #primaryItem *ngFor="let indicador of indicadoresEncontrados | paginate: { itemsPerPage: 10, currentPage: p }; let i = index " >
+            <nb-accordion-item-header (click)="openIndicador(indicador.id_indicador)">
+                <div class="titulo">
+                    <h5>{{indicador.nombre}}</h5>
+                </div>
+         
+               
+            </nb-accordion-item-header>
+            <nb-accordion-item-body >
+                <h6>Categoria</h6>
+                <nb-list>
+                    
+                    <nb-list-item *ngFor="let categoria of categorias_indicador">
+                        <nb-icon icon="checkmark-square-outline" pack="eva"></nb-icon>
+
+                        {{categoria.nombre}}
+                      </nb-list-item>
+                </nb-list>
+                <br>
+                <h6>Documentos Fuentes</h6>
+                <nb-list>
+                    
+                    <nb-list-item *ngFor="let documento of documentos_indicador">
+                        <nb-icon icon="file-text-outline" pack="eva"></nb-icon>
+                        <a href="{{documento.url}}" target="_blank">{{documento.nombre}}</a>
+                      </nb-list-item>
+                </nb-list>
+
+                <br>
+                <ng-container *ngIf="csv_indicador">
+                    <ng-container *ngIf="csv_indicador.length > 0">
+                       <h6> Archivos CSV asociados</h6>
+                        <nb-list>
+                            
+                            <nb-list-item *ngFor="let csv of csv_indicador">
+
+                                <nb-icon icon="attach-outline" pack="eva">
+                                    
+                                </nb-icon>
+                                
+                                <ng-container *ngIf="downloadFileBool">
+                                    <a href="javascript:void(null)" (click)="downloadFile(csv.nombre)">
+                                    
+                                        {{csv.nombre}}
+                                    
+                                    </a>
+                                </ng-container>
+                                <ng-container *ngIf="!downloadFileBool">
+                                   
+                                    
+                                        {{csv.nombre}}
+                                    
+                                    
+                                </ng-container>
+                                
+                            </nb-list-item>
+                        </nb-list>
+                    </ng-container>
+                    
+                </ng-container>
+
+                
+                <br>
+                <ng-container *ngIf="texto_regiones != ''">
+                    <h6>Regiones</h6>
+                    <nb-list-item>
+                        <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                     
+                                {{texto_regiones}}
+                         
+
+                        
+                    </nb-list-item>
+                </ng-container>
+
+                <ng-container *ngIf="texto_provincias != ''">
+                    <h6>Provincias</h6>
+                    <nb-list-item>
+                        <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                        
+                           
+                                {{texto_provincias}}
+                        
+                        
+                        
+                    </nb-list-item>
+                </ng-container>
+
+                <ng-container *ngIf="texto_comunas!= ''">
+                    <h6>Comunas</h6>
+                    <nb-list-item>
+                        <nb-icon icon="globe-2-outline" pack="eva"></nb-icon>
+                          
+                                {{texto_comunas}}
+                        
+                        
+                        
+                        </nb-list-item>
+                </ng-container>
+                <!--
+                <button nbButton status="danger" (click)="openDialogAdd(indicador.id_indicador)">
+                    <nb-icon icon="plus">
+
+                    </nb-icon>
+                    Añadir archivo
+                </button>
+                -->
+
+            </nb-accordion-item-body>
+        </nb-accordion-item>
+    </nb-accordion>  
+    
+    <ng-container *ngIf="indicadoresEncontrados?.length>10">
+            
+        <div class="paginacion">
+            <pagination-controls (pageChange)="p=$event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+        </div>
+    
+    
+    </ng-container>
+
+</ng-container>

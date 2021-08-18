@@ -1,0 +1,97 @@
+cod_com,comuna,agno,grado,prom_lect6b_com,prom_mate6b_com,dif_lect6b_com,dif_mate6b_com,sigdif_lect6b_com,sigdif_mate6b_com
+22,ANGOL,2015,6b,250,252,5,2,No significativa,No significativa
+1,CARAHUE,2015,6b,237,226,-2,0,No significativa,No significativa
+2,CHOLCHOL,2015,6b,232,214,-4,-9,No significativa,No significativa
+23,COLLIPULLI,2015,6b,238,229,-2,-8,No significativa,Negativa y significativa
+3,CUNCO,2015,6b,245,243,9,12,Positiva y significativa,Positiva y significativa
+24,CURACAUTÍN,2015,6b,220,217,1,-5,No significativa,No significativa
+12,CURARREHUE,2015,6b,256,238,5,12,No significativa,Positiva y significativa
+25,ERCILLA,2015,6b,242,223,16,12,Positiva y significativa,Positiva y significativa
+13,FREIRE,2015,6b,236,226,-8,-9,Negativa y significativa,Negativa y significativa
+4,GALVARINO,2015,6b,226,220,-14,-5,Negativa y significativa,No significativa
+14,GORBEA,2015,6b,229,221,-3,-10,No significativa,Negativa y significativa
+5,LAUTARO,2015,6b,241,230,11,0,Positiva y significativa,No significativa
+15,LONCOCHE,2015,6b,237,236,-2,-4,No significativa,No significativa
+26,LONQUIMAY,2015,6b,228,221,-7,-1,No significativa,No significativa
+27,LOS SAUCES,2015,6b,248,233,3,-1,No significativa,No significativa
+28,LUMACO,2015,6b,235,224,-1,1,No significativa,No significativa
+6,MELIPEUCO,2015,6b,248,233,26,12,Positiva y significativa,Positiva y significativa
+7,NUEVA IMPERIAL,2015,6b,246,243,10,11,Positiva y significativa,Positiva y significativa
+16,PADRE LAS CASAS,2015,6b,245,245,2,1,No significativa,No significativa
+8,PERQUENCO,2015,6b,210,218,-26,-14,Negativa y significativa,Negativa y significativa
+17,PITRUFQUÉN,2015,6b,253,250,13,-1,Positiva y significativa,No significativa
+18,PUCÓN,2015,6b,258,252,3,-1,No significativa,No significativa
+29,PURÉN,2015,6b,237,238,-10,6,Negativa y significativa,No significativa
+30,RENAICO,2015,6b,224,215,-13,-17,Negativa y significativa,Negativa y significativa
+9,SAAVEDRA,2015,6b,230,214,-2,8,No significativa,No significativa
+10,TEMUCO,2015,6b,255,257,7,1,Positiva y significativa,No significativa
+19,TEODORO SCHMIDT,2015,6b,247,228,9,9,Positiva y significativa,No significativa
+20,TOLTÉN,2015,6b,241,233,-4,2,No significativa,No significativa
+31,TRAIGUÉN,2015,6b,244,243,5,6,No significativa,No significativa
+32,VICTORIA,2015,6b,245,241,6,9,No significativa,Positiva y significativa
+11,VILCÚN,2015,6b,243,236,5,-2,No significativa,No significativa
+21,VILLARRICA,2015,6b,253,248,3,-4,No significativa,No significativa
+9201,ANGOL,2016,6b,255,258,5,6,No significativa,No significativa
+9102,CARAHUE,2016,6b,240,233,2,5,No significativa,No significativa
+9121,CHOLCHOL,2016,6b,230,217,-2,2,No significativa,No significativa
+9202,COLLIPULLI,2016,6b,241,232,4,4,No significativa,No significativa
+9103,CUNCO,2016,6b,242,236,-3,-7,No significativa,No significativa
+9203,CURACAUTÍN,2016,6b,231,225,12,8,Positiva y significativa,No significativa
+9104,CURARREHUE,2016,6b,257,238,1,-1,No significativa,No significativa
+9204,ERCILLA,2016,6b,239,215,-3,-8,No significativa,No significativa
+9105,FREIRE,2016,6b,247,230,12,4,Positiva y significativa,No significativa
+9106,GALVARINO,2016,6b,237,218,11,-1,Positiva y significativa,No significativa
+9107,GORBEA,2016,6b,229,226,0,4,No significativa,No significativa
+9108,LAUTARO,2016,6b,245,236,4,6,No significativa,No significativa
+9109,LONCOCHE,2016,6b,254,243,18,8,Positiva y significativa,No significativa
+9205,LONQUIMAY,2016,6b,236,224,8,3,No significativa,No significativa
+9206,LOS SAUCES,2016,6b,242,223,-3,-8,No significativa,No significativa
+9207,LUMACO,2016,6b,239,220,4,-4,No significativa,No significativa
+9110,MELIPEUCO,2016,6b,242,216,-6,-14,No significativa,Negativa y significativa
+9111,NUEVA IMPERIAL,2016,6b,245,238,-2,-6,No significativa,No significativa
+9112,PADRE LAS CASAS,2016,6b,251,246,7,1,Positiva y significativa,No significativa
+9113,PERQUENCO,2016,6b,246,235,36,17,Positiva y significativa,Positiva y significativa
+9114,PITRUFQUÉN,2016,6b,257,254,4,4,No significativa,No significativa
+9115,PUCÓN,2016,6b,255,249,-4,-4,No significativa,No significativa
+9208,PURÉN,2016,6b,253,243,14,0,Positiva y significativa,No significativa
+9209,RENAICO,2016,6b,238,232,14,17,Positiva y significativa,Positiva y significativa
+9116,SAAVEDRA,2016,6b,238,218,7,2,No significativa,No significativa
+9101,TEMUCO,2016,6b,256,257,1,0,No significativa,No significativa
+9117,TEODORO SCHMIDT,2016,6b,247,230,0,1,No significativa,No significativa
+9118,TOLTÉN,2016,6b,243,230,2,-3,No significativa,No significativa
+9210,TRAIGUÉN,2016,6b,237,242,-7,-2,No significativa,No significativa
+9211,VICTORIA,2016,6b,245,236,-1,-5,No significativa,No significativa
+9119,VILCÚN,2016,6b,245,240,1,3,No significativa,No significativa
+9120,VILLARRICA,2016,6b,252,246,-1,-2,No significativa,No significativa
+9201,Angol,2018,6b,251,252,-4,-6,0,0
+9202,Collipulli,2018,6b,236,229,-5,-3,0,0
+9203,Curacautín,2018,6b,226,225,-6,0,0,0
+9204,Ercilla,2018,6b,238,221,-1,7,0,0
+9205,Lonquimay,2018,6b,232,219,-3,-5,0,0
+9206,Los Sauces,2018,6b,258,246,16,27,1,1
+9118,Toltén,2018,6b,238,229,-4,1,0,0
+9120,Villarrica,2018,6b,256,247,4,2,0,0
+9107,Gorbea,2018,6b,235,233,6,8,0,0
+9109,Loncoche,2018,6b,250,237,-5,-7,0,0
+9112,Padre las Casas,2018,6b,248,239,-3,-6,0,0
+9114,Pitrufquén,2018,6b,250,248,-7,-6,0,0
+9115,Pucón,2018,6b,255,251,-1,2,0,0
+9117,Teodoro Schmidt,2018,6b,243,232,-4,2,0,0
+9113,Perquenco,2018,6b,235,225,-11,-10,-1,0
+9116,Saavedra,2018,6b,234,225,-6,5,0,0
+9119,Vilcún,2018,6b,243,236,-2,-3,0,0
+9121,Cholchol,2018,6b,238,219,7,3,0,0
+9104,Curarrehue,2018,6b,243,231,-16,-10,-1,0
+9105,Freire,2018,6b,247,233,0,3,0,0
+9102,Carahue,2018,6b,240,228,1,-3,0,0
+9103,Cunco,2018,6b,243,230,1,-5,0,0
+9106,Galvarino,2018,6b,226,216,-12,-7,-1,0
+9108,Lautaro,2018,6b,239,230,-6,-6,0,0
+9110,Melipeuco,2018,6b,232,217,-9,3,0,0
+9111,Nueva Imperial,2018,6b,239,238,-6,0,0,0
+9207,Lumaco,2018,6b,231,227,-9,8,0,0
+9208,Purén,2018,6b,253,243,11,15,1,1
+9209,Renaico,2018,6b,246,245,8,13,0,1
+9210,Traiguén,2018,6b,246,249,9,7,1,0
+9211,Victoria,2018,6b,239,233,-6,-3,0,0
+9101,Temuco,2018,6b,258,259,2,2,0,0

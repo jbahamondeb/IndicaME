@@ -1,0 +1,33 @@
+<nb-form-field>
+    <input nbInput #autoInputUser placeholder="Rango de fechas" [nbDatepicker]="rangepicker">
+    
+    <button nbSuffix nbButton ghost (click)="reset()">
+        <nb-icon [icon]="'close-outline'"
+        pack="eva">
+        </nb-icon>
+    </button>
+    <nb-rangepicker #rangepicker (rangeChange)="onEventStartEndRange($event)" format="dd\MM\yyyy" ></nb-rangepicker>
+</nb-form-field>
+<div class="header">
+
+
+
+    <ng-container *ngIf="fecha1 !== ''">
+        <span class="caption">Comuna Seleccionada {{fecha1 | date:'dd/MM/yyyy' }} - {{fecha2 | date:'dd/MM/yyyy'}}</span>
+    </ng-container>
+
+    <ng-container *ngIf="fecha1 == ''">
+        <span class="caption">Comuna Seleccionada</span>
+    </ng-container>
+
+
+
+<h2 class="h4">{{ countryName }}</h2>
+</div>
+
+<div echarts
+    [options]="option"
+    class="echart"
+    (chartInit)="onChartInit($event)">
+</div>
+

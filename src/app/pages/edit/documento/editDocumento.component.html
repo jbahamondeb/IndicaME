@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Seleccionar Documento Fuente para editar</nb-card-header>
+            <nb-card-body>
+                <nb-form-field>
+                    <input
+                    [ngModel]="value"
+                    (ngModelChange)="onModelChange($event)"
+                    nbInput
+                    type="text"
+                    placeholder="Busca el documento a modificar..."
+                    [nbAutocomplete]="autoNgModel" fullWidth id="documento"/>
+
+                    <nb-autocomplete #autoNgModel (selectedChange)="valorSeleccionado($event)">
+                        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                            {{ option }}
+                          </nb-option>
+                    </nb-autocomplete>
+
+                   
+
+
+
+                    
+                </nb-form-field>
+            </nb-card-body>
+        </nb-card>
+
+    </div>
+</div>
+
+
+<ng-container *ngIf="seleccionado">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-header>Edición de Documento Fuente
+                    <ng-container *ngIf="admin">
+                        <button style="padding:0%" nbButton ghost status="danger" (click)="deleteDocumento()">
+                            <nb-icon icon="trash-2-outline" pack="eva">
+    
+                            </nb-icon>
+                            Eliminar Documento Fuente
+                        </button>
+                    </ng-container>
+                    
+                
+                </nb-card-header>
+                <nb-card-body>
+                    <nb-form-field>
+                        <form [formGroup]="firstFormGroup" class="step-container" autocomplete="off">
+                            <p> <u>Nombre actual:</u>  <b> {{documento}}</b> </p>
+                            <label for="inputNombre"  class="label">Nuevo nombre de documento fuente</label>
+                            <input type="text" nbInput fullWidth placeholder="Nuevo Nombre" formControlName="nombre" id = "inputNombre">
+                            <br>
+                            <br>
+                            <p> <u>Institución: </u></p>
+                            <nb-list>
+                                <nb-list-item *ngFor="let institucion of instituciones">
+                                    <b>
+                                        <nb-icon icon="file-text-outline" pack="eva">
+                                                
+                                        </nb-icon>
+                                        {{institucion.institucion}}
+                                    </b>
+
+                                    <ng-container *ngIf="instituciones.length>1">
+                                        <button nbButton ghost status="danger" (click)="deleteServicio2(institucion.id_servicio, institucion.institucion)">
+                                            <nb-icon icon="trash-2-outline" pack="eva">
+    
+                                            </nb-icon>
+                                        </button>
+                                    </ng-container>
+
+                                </nb-list-item>
+                            </nb-list>
+                            <label for="inputServicio"  class="label">Nueva institucion</label>
+                            <br>
+                            <nb-list>
+                                <nb-list-item *ngFor="let new_servicio of new_servicios">
+                                    
+                                        <nb-icon icon="file-text-outline" pack="eva">
+                                                
+                                        </nb-icon>
+                                        {{new_servicio.institucion}}
+                                        <button nbButton ghost status="danger" (click)="deleteServicio(new_servicio)">
+                                            <nb-icon icon="trash-2-outline" pack="eva">
+                    
+                                            </nb-icon>
+                                            
+                                        </button>
+                                    
+
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+
+                            <nb-form-field>
+                                <input
+                                id="inputServicio"
+                                [ngModel]="value2"
+                                (ngModelChange)="onModelChange2($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Busca la institución a añadir..."
+                                [nbAutocomplete]="autoNgModel2" fullWidth formControlName="servicioFuente"/>
+            
+                                <nb-autocomplete #autoNgModel2 (selectedChange)="valorSeleccionado2($event)">
+                                    <nb-option *ngFor="let option of filteredNgModelOptions2$ | async" [value]="option">
+                                        {{ option }}
+                                      </nb-option>
+                                </nb-autocomplete>
+            
+                                
+            
+                                <br>
+                            <br>
+                            <button nbButton status="primary" (click)="registrarCambios()">
+                                <nb-icon icon="save-outline" pack="eva">
+
+                                </nb-icon>
+                                Registrar cambios
+                            </button>
+            
+                                
+                            </nb-form-field>
+                        </form>
+                    </nb-form-field>
+                </nb-card-body>
+            </nb-card>
+
+        </div>
+    </div>
+</ng-container>

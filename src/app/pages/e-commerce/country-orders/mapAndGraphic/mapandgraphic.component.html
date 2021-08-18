@@ -1,0 +1,303 @@
+
+
+<!--<div leaflet [leafletOptions]="options" [leafletLayers]="layers" (leafletMapReady)="mapReady($event)">
+
+    
+</div>
+
+-->
+
+
+
+        <nb-card>
+            <nb-card-body>
+                <div class="wrapper">
+                    <div class="medio">
+                        <div id="mapa" class="map" *ngIf="showRegiones">
+                            <input
+                                [ngModel]="value"
+                                (ngModelChange)="onModelChange($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Región"
+                                [nbAutocomplete]="autoNgModel"/>
+                        
+                        
+                                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                                        {{ option }}
+                                    </nb-option>
+                                </nb-autocomplete>
+                        
+                        
+                            
+                                <button nbButton ghost (click)="toggleShowLayer()">
+                                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                                        pack="eva"
+                                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                                    >
+                                    </nb-icon>
+                                </button>
+                            
+                            
+                        </div>
+                        
+                        <div id="mapa2v2" class="map" *ngIf="showProvincias">
+                            <input
+                                [ngModel]="value"
+                                (ngModelChange)="onModelChange($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Provincia"
+                                [nbAutocomplete]="autoNgModel"/>
+                        
+                        
+                                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                                        {{ option }}
+                                    </nb-option>
+                                </nb-autocomplete>
+                        
+                        
+                            
+                                <button nbButton ghost (click)="toggleShowLayer()">
+                                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                                        pack="eva"
+                                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                                    >
+                                    </nb-icon>
+                                </button>
+                            
+                            
+                        </div>
+                        
+                        <div id="mapa3" class="map" *ngIf="showComunas">
+                            <input
+                                [ngModel]="value"
+                                (ngModelChange)="onModelChange($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Comuna"
+                                [nbAutocomplete]="autoNgModel"/>
+                        
+                        
+                                <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+                                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                                        {{ option }}
+                                    </nb-option>
+                                </nb-autocomplete>
+                        
+                        
+                            
+                                <button nbButton ghost (click)="toggleShowLayer()">
+                                    <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+                                        pack="eva"
+                                        [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+                                    >
+                                    </nb-icon>
+                                </button>
+                            
+                            
+                        </div>
+                    </div>
+        
+                    <div class="medio">
+                            <nb-toggle status="basic" (checkedChange)="activateYears($event)" >Activar años</nb-toggle>
+                            <div class="buscadores2" style="margin: 2%">
+                                <ngx-slider [(value)]="valueTime" [(highValue)]="highValue" [options]="opcionesSlider"></ngx-slider>
+                               
+                                <button nbButton status="primary" (click)="filterByYears()" [disabled]="disabled"><nb-icon icon="search-outline" ></nb-icon>Filtrar</button>
+                            </div>
+                            <!--
+                            <input nbInput #autoInputUser placeholder="Rango de fechas" [nbDatepicker]="rangepicker" >
+                            <nb-rangepicker #rangepicker (rangeChange)="onEventStartEndRange($event)" format="dd\MM\yyyy" ></nb-rangepicker>
+                                <button nbSuffix nbButton ghost (click)="reset()">
+                                    <nb-icon [icon]="'close-outline'"
+                                    pack="eva">
+                                    </nb-icon>
+                                </button>
+                            -->
+                            <!--
+                            <div class="fechas">
+                                
+                                
+                                <nb-rangepicker #rangepicker (rangeChange)="onEventStartEndRange($event)" format="dd\MM\yyyy" ></nb-rangepicker>
+                                
+                            </div>
+                            -->
+                            
+                            
+                            
+                                
+                                
+                           
+                            
+                            <div class="header">
+                            
+                            
+                                <ng-container *ngIf="fecha1 !== ''">
+                                    <ng-container *ngIf="seleccionado === 'Regiones'">
+                                        <span class="caption">Región Seleccionada {{fecha1 | date:'dd/MM/yyyy' }} - {{fecha2 | date:'dd/MM/yyyy'}}</span>
+                                    </ng-container>
+                
+                                    <ng-container *ngIf="seleccionado === 'Provincias'">
+                                        <span class="caption">Provincia Seleccionada {{fecha1 | date:'dd/MM/yyyy' }} - {{fecha2 | date:'dd/MM/yyyy'}}</span>
+                                    </ng-container>
+                
+                                    <ng-container *ngIf="seleccionado === 'Comunas'">
+                                        <span class="caption">Comuna Seleccionada {{fecha1 | date:'dd/MM/yyyy' }} - {{fecha2 | date:'dd/MM/yyyy'}}</span>
+                                    </ng-container>
+                                    
+                                </ng-container>
+                            
+                                <ng-container *ngIf="fecha1 == ''">
+                                    <ng-container *ngIf="seleccionado === 'Regiones'">
+                                        <span class="caption">Región Seleccionada</span>
+                                    </ng-container>
+                
+                                    <ng-container *ngIf="seleccionado === 'Provincias'">
+                                        <span class="caption">Provincia Seleccionada</span>
+                                    </ng-container>
+                
+                                    <ng-container *ngIf="seleccionado === 'Comunas'">
+                                        <span class="caption">Comuna Seleccionada</span>
+                                    </ng-container>
+                                    
+                                </ng-container>
+                            
+                            
+                                
+                            
+                            <h2 class="h4">{{ countryName }}</h2>
+                            </div>
+                            
+                            <div echarts [options]="option" class="echart" (chartInit)="onChartInit($event)" [hidden]="showGraph"></div>
+
+                            <!--
+                            <ng-container *ngIf="!showGraph">
+                                
+                            </ng-container>
+                            -->
+                            <ng-container *ngIf="showGraph">
+                                <ng-container *ngIf="disabled">
+                                    <h7>No hay indicadores para esta zona.</h7>
+                                </ng-container>
+
+                                <ng-container *ngIf="!disabled">
+                                    <h7>No hay indicadores para esta zona y en este intervalo de años.</h7>
+                                </ng-container>
+                                
+                            </ng-container>
+                            
+                    </div>
+                </div>
+            </nb-card-body>
+        </nb-card>
+
+
+    
+
+
+
+
+<!--
+<ng-container *ngIf="seleccionado === 'Regiones'">
+<div id="mapa" class="map">
+<input
+    [ngModel]="value"
+    (ngModelChange)="onModelChange($event)"
+    nbInput
+    type="text"
+    placeholder="Busca una región"
+    [nbAutocomplete]="autoNgModel"/>
+
+
+    <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+            {{ option }}
+          </nb-option>
+    </nb-autocomplete>
+
+
+
+    <button nbButton ghost (click)="toggleShowLayer()">
+        <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+            pack="eva"
+            [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+           >
+        </nb-icon>
+    </button>
+
+
+</div>
+</ng-container>
+-->
+<!--
+<ng-container *ngIf="seleccionado === 'Provincias'">
+<div id="mapa2v2" class="map">
+<input
+    [ngModel]="value"
+    (ngModelChange)="onModelChange($event)"
+    nbInput
+    type="text"
+    placeholder="Busca una provincia"
+    [nbAutocomplete]="autoNgModel"/>
+
+
+    <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+            {{ option }}
+          </nb-option>
+    </nb-autocomplete>
+
+
+
+    <button nbButton ghost (click)="toggleShowLayer()">
+        <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+            pack="eva"
+            [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+           >
+        </nb-icon>
+    </button>
+
+
+</div>
+</ng-container>
+
+-->
+
+<!--
+
+<ng-container *ngIf="seleccionado === 'Comunas'">
+
+<div id="mapa3" class="map">
+<input
+    [ngModel]="value"
+    (ngModelChange)="onModelChange($event)"
+    nbInput
+    type="text"
+    placeholder="Busca una comuna"
+    [nbAutocomplete]="autoNgModel"/>
+
+
+    <nb-autocomplete #autoNgModel (selectedChange)="onSelectionChange($event)">
+        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+            {{ option }}
+          </nb-option>
+    </nb-autocomplete>
+
+
+
+    <button nbButton ghost (click)="toggleShowLayer()">
+        <nb-icon [icon]="showLayer ? 'eye-off-2-outline' : 'eye-outline'"
+            pack="eva"
+            [attr.aria-label]="showLayer ? 'hide password' : 'show password'" status="basic"
+           >
+        </nb-icon>
+    </button>
+
+
+</div>
+</ng-container>
+
+-->

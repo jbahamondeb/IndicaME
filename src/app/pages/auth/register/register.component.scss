@@ -1,0 +1,36 @@
+.input-box {
+    display: flex;
+    align-items: center;
+
+  }
+  
+
+  .aranya button{
+    text-decoration: underline !important;
+    color: blue !important;
+
+  }
+  
+  .aranya button:hover {
+    background-color: transparent !important;
+    
+  }
+
+
+  .input-box nb-icon{
+    min-width: 0;
+  }
+
+  .captcha{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  ::ng-deep .align-content-center button{
+      text-align: center !important;
+  }
+
+

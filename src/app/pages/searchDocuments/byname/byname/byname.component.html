@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Buscar documento fuente por nombre</nb-card-header>
+            <nb-card-body>
+
+                <nb-form-field>
+                    <input
+                    [ngModel]="value"
+                    (ngModelChange)="onModelChange($event)"
+                    nbInput
+                    type="text"
+                    placeholder="Busca un documento fuente por su nombre..."
+                    [nbAutocomplete]="autoNgModel" fullWidth id="documento" autocomplete="off"/>
+
+                    <nb-autocomplete #autoNgModel>
+                        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                            {{ option }}
+                          </nb-option>
+                    </nb-autocomplete>
+                    
+                        <button nbButton nbSuffix status="primary" (click)="searchByName()"><nb-icon icon="search-outline" ></nb-icon>Buscar</button>
+                    
+                    
+                </nb-form-field>
+                
+            </nb-card-body>
+        </nb-card>
+    </div>
+
+</div>
+
+<ng-container *ngIf="documentosEncontrados?.length>0">
+    <nb-accordion>
+                    <nb-accordion-item #primaryItem *ngFor="let documento of documentosEncontrados | paginate: { itemsPerPage: 10, currentPage: p }; let i = index;" >
+                        <nb-accordion-item-header (click)="openDocument(documento.id_documento)">
+                            <div class="titulo">
+                                <h5>{{documento.nombre}}</h5>
+                            </div>
+                            
+                        </nb-accordion-item-header>
+                        <nb-accordion-item-body >
+
+                            <h6>Categorias Aportadas</h6>
+
+                            <nb-list>
+                                <nb-list-item *ngFor="let categoria of categoria_aportada">
+                                    <nb-icon icon="checkmark-square-outline" pack="eva"></nb-icon>
+                                    {{categoria.nombre}}
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                            <h6>Servicios Fuentes</h6>
+                            
+                            <nb-list>
+                                    
+                                <nb-list-item *ngFor="let servicio of servicios_indicador">
+                                    <nb-icon icon="book-outline" pack="eva"></nb-icon>
+                                    {{servicio.institucion}}
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                            <div class="sameline">
+                                <h6>URL de obtención: &nbsp;</h6>  <a href="{{documento.url}}" target="_bank"> {{ documento.url}}</a> 
+                            </div>
+                            
+
+                            
+                            <br>
+                           <h6> Formatos del Documento </h6>
+                            <nb-list>
+                                <nb-list-item *ngFor="let formato of formatos_documento">
+                                    <nb-icon icon="pricetags-outline" pack="eva"></nb-icon>
+                                    .{{formato.formato}}
+                                </nb-list-item>
+                            </nb-list>
+                        </nb-accordion-item-body>
+                        
+                        
+                    </nb-accordion-item>
+                </nb-accordion>
+
+                <ng-container *ngIf="documentosEncontrados?.length>10">
+                        
+                    <div class="paginacion">
+                        <pagination-controls (pageChange)="p=$event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+                    </div>
+                
+                
+                </ng-container>
+</ng-container>

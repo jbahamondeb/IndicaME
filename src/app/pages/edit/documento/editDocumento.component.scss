@@ -1,0 +1,33 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+    @include media-breakpoint-down(xs) {
+
+
+        ::placeholder{
+            font-size: 12px
+        }
+
+        button{
+            font-size: 12px;
+            overflow: hidden;
+        }
+    }
+
+}
+.swal-modal .swal-text {
+    text-align: center !important;
+}
+
+::ng-deep .swal2-html-container{
+
+    margin: 0 auto;
+}
+
+
+button .adaptado{
+    padding: 0%
+}
+

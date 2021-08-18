@@ -1,0 +1,233 @@
+
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Añadir nuevo Indicador.</nb-card-header>
+            <nb-card-body>
+
+                <nb-form-field>
+                    <form [formGroup]="firstFormGroup" class="step-container" autocomplete="off">
+                        <label for="inputNombre"  class="label">Nombre de indicador</label>
+                        <input type="text" nbInput fullWidth placeholder="Nombre" formControlName="nombre" id = "inputNombre" (change)="changeName($event)">
+                        
+                        <ng-container *ngIf="!validNombre">
+                            <p class="caption status-danger">
+                                El indicador debe llevar un nombre.
+                            </p>
+                        </ng-container>
+
+
+                        <label for="categoria"  class="label">Categoría del indicador</label>
+                        <nb-select fullWidth id="categoria" [(selected)]="selectedCategoria" placeholder="Categoría" formControlName="categoria" (selectedChange)="changeCategoria($event)">
+                            
+                            <nb-option value="{{categoria.id_categoria}}" *ngFor="let categoria of categorias">{{categoria.nombre}}</nb-option>
+
+                        </nb-select>
+                        <ng-container *ngIf="!validCategoria; else div38">
+                            <p class="caption status-danger">
+                                El indicador debe llevar una categoria.
+                            </p>
+                        </ng-container>
+                        <ng-template #div38>
+                            <br>
+                            <br>
+                            
+                        </ng-template>
+
+
+
+                        <nb-toggle status="primary" (checkedChange)="noExiste($event)" labelPosition="end" formControlName="toggle" >Categoria inexistente.</nb-toggle>
+                        <br>
+                        <ng-container *ngIf="categoriaInexistente">
+
+                                <input type="text" nbInput placeholder="Categoria Nueva." formControlName="categoriaNueva" status="info">
+                                <br>
+                                <button nbButton status="info" style="margin-top: 1%;" (click)="addCategorie()">Agregar Categoria</button>
+
+                                <ng-container *ngIf="invalid">
+                                    <p class="caption status-danger">
+                                        El nombre de la nueva categoría debe tener al menos 5 caracteres.
+                                    </p>
+                                </ng-container>
+                            
+                                <br>
+                                <br>
+                        </ng-container>
+                        
+                        
+                        <label for="servicioFuente"  class="label">Institución de obtención</label>
+
+                                <input
+                                [ngModel]="value"
+                                (ngModelChange)="onModelChange($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Institución"
+                                [nbAutocomplete]="autoNgModel" formControlName="servicioFuente" id="servicioFuente" fullWidth />
+
+                                <nb-autocomplete #autoNgModel (selectedChange)="valorSeleccionado($event)">
+                                    <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                                        {{ option }}
+                                    </nb-option>
+                                </nb-autocomplete>
+                        <ng-container *ngIf="!validServicio2; else div47">
+                            <p class="caption status-danger">
+                                El indicador debe ser obtenido de alguna Institución.
+                            </p>
+                        </ng-container>
+                        <ng-template #div47>
+                            <br>
+                            <br>
+                            
+                        </ng-template>
+                        <nb-toggle status="primary" (checkedChange)="noExisteServicio($event)" labelPosition="end" formControlName="toggle2" >Servicio Fuente inexistente.</nb-toggle>
+                        <ng-container *ngIf="servicioInexistente">
+                            <br>
+                            
+                            <input type="text" nbInput placeholder="Institución nueva." formControlName="servicioNuevo" status="info">
+                            <ng-container *ngIf="!validServicio; else div2">
+                                <p class="caption status-danger">
+                                    El nombre de la nueva Institución debe tener al menos 2 caracteres.
+                                </p>
+                            </ng-container>
+                            <br>
+                            <button nbButton status="info"  (click)="addService()" style="margin-top: 1%;">Agregar Institución.</button>
+                            
+                       
+                            
+                        </ng-container>
+                        
+                        
+                        <br>
+                        <label for="documentoFuente" class="label">Documento Fuente de obtención</label>
+
+                        <ng-container *ngIf="documentos?.length==0">
+                            <nb-select disabled fullWidth id="documentoFuente" placeholder="Documento Fuente">
+                                
+    
+                            </nb-select>
+                        </ng-container>
+                        <ng-container *ngIf="documentos?.length>0">
+                            <nb-select fullWidth id="documentoFuente" [(selected)]="selectedDocumentoFuente" placeholder="Documento Fuente" formControlName="documentoFuente" (selectedChange)="changeDocumentoFuente($event)">
+                                
+                                <nb-option value="{{documento.id_documento}}" *ngFor="let documento of documentos">{{documento.nombre}}</nb-option>
+                                
+    
+                            </nb-select>
+                        </ng-container>
+                        
+                        
+
+                        
+                        <ng-container *ngIf="documentos?.length==0;else div10">
+                            <p class="caption status-danger">
+                                No has seleccionado un servicio fuente.
+                            </p>
+                        </ng-container>
+                        
+                        <ng-container *ngIf="!validDocumento2 && documentos?.length>0;">
+                            <p class="caption status-danger">
+                                No has seleccionado un documento fuente.
+                            </p>
+                        </ng-container>
+
+                        
+                        <ng-template #div10>
+                            <br>
+                            
+                            
+                        </ng-template>
+
+                        <ng-container *ngIf="validDocumento2 && documentos?.length>0">
+                            <br>
+                        </ng-container>
+                        
+                        <nb-toggle status="primary" (checkedChange)="noExisteDocumento($event)" labelPosition="end" formControlName="toggle3" >Documento Fuente inexistente.</nb-toggle>
+                        <br>
+                        
+                        
+                        <ng-container *ngIf="documentoInexistente">
+                            <label for="servicioFuente2"  class="label">Institución de obtención de documento.</label>
+                            <input
+                                [ngModel]="value2"
+                                (ngModelChange)="onModelChange2($event)"
+                                nbInput
+                                type="text"
+                                placeholder="Institución"
+                                [nbAutocomplete]="autoNgModel2" formControlName="servicioFuente2" id="servicioFuente2" fullWidth />
+
+                                <nb-autocomplete #autoNgModel2 (selectedChange)="valorSeleccionado2($event)" >
+                                    <nb-option *ngFor="let option of filteredNgModelOptions2$ | async" [value]="option" status="info">
+                                        {{ option }}
+                                    </nb-option>
+                                </nb-autocomplete>
+
+                                <ng-container *ngIf="!validInstitucion; else div13">
+                                    <p class="caption status-danger">
+                                        Debes Seleccionar una Institución desde la lista.
+                                    </p>
+                                </ng-container>
+
+                                <ng-template #div13>
+                                    <br>
+                                    <br>
+                                    
+                                </ng-template>
+
+                            <input type="text" nbInput placeholder="Documento Fuente Nuevo." formControlName="documentoNuevo" status="info">
+                            <ng-container *ngIf="!validDocumento; else div3">
+                                <p class="caption status-danger">
+                                    El nombre del nuevo documento debe tener al menos 5 caracteres.
+                                </p>
+                            </ng-container>
+
+                            <ng-template #div3>
+                                <br>
+                                <br>
+                                
+                            </ng-template>
+                            <input type="url" nbInput placeholder="URL Documento Fuente." formControlName="urlDocumento" status="info">
+                            <ng-container *ngIf="!validurl;else div4">
+                                <p class="caption status-danger">
+                                    La URL es incorrecta.
+                                </p>
+                            </ng-container>
+                            <ng-template #div4>
+                                <br>
+                                <br>
+                                
+                            </ng-template>
+
+                            <ng-container *ngFor="let formato of formatos | keyvalue">
+                                <nb-checkbox (change)="filtrar($event, formato.key)">{{formato.value.formato}}</nb-checkbox>
+                            </ng-container>
+                            <ng-container *ngIf="!validFormatos;else div5">
+                                <p class="caption status-danger">
+                                    Debe seleccionar al menos un formato.
+                                </p>
+                            </ng-container>
+                            <ng-template #div5>
+                                <br>
+                                <br>
+                                
+                            </ng-template>
+                            
+                            
+
+                            <button nbButton status="info"  (click)="addDocument()">Agregar Documento.</button>
+                            <br>
+                            <br>
+                        </ng-container>
+                        
+                        <button nbButton status="success"  (click)="addIndicador()">Agregar Indicador.</button>
+                    </form>
+
+
+                </nb-form-field>
+
+                
+                
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

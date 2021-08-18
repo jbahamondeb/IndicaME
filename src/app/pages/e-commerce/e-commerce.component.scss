@@ -1,0 +1,16 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+
+.separador nb-card{
+
+    padding-top: 3%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+
+.separador nb-card-header{
+    font-size: 2em !important;
+    border: none;
+}

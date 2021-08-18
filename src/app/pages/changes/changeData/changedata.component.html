@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xxl-12">
+      <nb-card >
+          <nb-card-header>Modificaciones a realizar</nb-card-header>
+          <nb-card-body>
+              <ng2-smart-table [settings]="settings" [source]="source" ></ng2-smart-table>
+          </nb-card-body>
+          <div class="example-items-rows" style="text-align: center;">
+            <button nbButton status="success" (click)="confirmChanges()">
+              <nb-icon icon="checkmark-outline" pack="eva">
+      
+              </nb-icon>
+              Confirmar cambios
+            </button>
+            
+            <button nbButton status="danger" (click)="refuseChanges()">
+              <nb-icon icon="close-outline" pack="eva">
+      
+              </nb-icon>
+              No realizar cambios
+            </button>
+          </div>
+          
+      </nb-card>
+      
+  </div>
+</div>

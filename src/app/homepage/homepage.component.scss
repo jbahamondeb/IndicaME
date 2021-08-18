@@ -1,0 +1,105 @@
+.cuerpo{
+    width: 100%;
+    
+    height: 100vh;
+
+    background: url('../../assets/images/background.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    }
+
+.some-page-wrapper {
+    margin: 0px;
+    
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+  
+  .column {
+      position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
+  .blue-column {
+    
+    height: 100vh;
+  }
+  
+  .green-column {
+   
+    height: 100vh;
+  }
+
+  .center{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+  }
+
+  .center .imagenBorde{
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+  }
+
+  .center .imagenBorde img{
+      width: 520px;
+      height: 520px;
+  }
+
+  .center .finPage{
+      margin-top: 5%;
+
+      
+  }
+
+.container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sliders {
+    position: relative;
+    width: 100vw;
+    height: 66vw;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /*
+  .img {
+    width: 20%;
+    height: 20%;
+  }
+  */
+
+
+
+  .leerMas{
+      
+      text-align: center;
+      padding: 10%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+   }

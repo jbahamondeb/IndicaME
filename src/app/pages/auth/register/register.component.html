@@ -1,0 +1,204 @@
+<ng-container *ngIf="dialog">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card [nbSpinner] = "loading" nbSpinnerSize="large" nbSpinnerStatus="danger">
+                <nb-card-header>Registrarse</nb-card-header>
+    
+                <nb-card-body>
+                    <nb-form-field>
+                        <form [formGroup]="firstFormGroup" *ngIf="!nextForm" autocomplete="off">
+                            <label for="inputCorreo"  class="label">Correo electrónico*</label>
+                            <br>
+                            
+                            <div class="input-box">
+                                <nb-icon style="margin-right: 3%;" icon="email-outline" pack="eva">
+    
+                                </nb-icon>
+                                <input type="text" nbInput placeholder="Correo" formControlName="correo" id = "inputCorreo" (input)="change($event, 'correo')">
+                            </div>
+    
+                            <p *ngIf="noCorreo" class="caption status-danger">
+                                Correo requerido
+                            </p>
+                            <ng-container *ngIf="!noCorreo;">
+                                <p *ngIf="incorrectCorreo;" class="caption status-danger">
+                                    Correo mal escrito
+                                </p>
+                            </ng-container>
+                            
+                            <ng-container *ngIf="!noCorreo && !incorrectCorreo">
+                                <br>
+                            </ng-container>
+                         
+    
+                            
+                            <label for="inputPass"  class="label">Contraseña*</label>
+                            <br>
+                            <div class="input-box">
+                                <nb-icon style="margin-right: 3%;" icon="lock-outline" pack="eva">
+    
+                                </nb-icon>
+                                
+                                
+                                    <input style="width: 90% !important;" [type]="getInputType()" nbInput  
+                                    placeholder="Contraseña" formControlName="pass" id = "inputPass" (input)="change($event,'pass')">
+    
+                                    <button nbSuffix nbButton ghost (click)="toggleShowPassword()" >
+                                        <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-2-outline'"
+                                                pack="eva"
+                                                [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+                                        </nb-icon>
+                                    </button>
+                            </div>
+    
+                            <p *ngIf="noPass" class="caption status-danger">
+                                Contraseña requerida
+                            </p>
+    
+                            <ng-container *ngIf="!noPass;">
+                                <p *ngIf="incorrectPassLength;" class="caption status-danger">
+                                    La contraseña debe tener al menos 8 caracteres.
+                                </p>
+                                <p *ngIf="!incorrectPassLength && incorrectPassNumber;" class="caption status-danger">
+                                    La contraseña debe tener al menos un número.
+                                </p>
+    
+                                <p *ngIf="!incorrectPassLength && !incorrectPassNumber && incorrectPassSpecial;" class="caption status-danger">
+                                    La contraseña debe tener al menos un caracter especial.
+                                </p>
+    
+                                <p *ngIf="!incorrectPassLength && !incorrectPassNumber && !incorrectPassSpecial && incorrectPassUpper;" class="caption status-danger">
+                                    La contraseña debe tener al menos una mayúscula.
+                                </p>
+    
+                            </ng-container>
+    
+                            <ng-container *ngIf="!noPass && !incorrectPassLength && !incorrectPassNumber && !incorrectPassSpecial && !incorrectPassUpper">
+                                <br>
+                            </ng-container>
+    
+                            <label for="inputNombre"  class="label">Nombre y Apellidos*</label>
+                            <br>
+        
+                                <div class="form-group row">
+                                    <div class="col-sm-5">
+                                        <input nbInput placeholder="Nombre" formControlName="nombre" id = "inputNombre" (input)="change($event,'nombre')">
+                                        <p *ngIf="noName;" class="caption status-danger">
+                                            Nombre requerido.
+                                        </p>
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <input nbInput  placeholder="Apellido Paterno" formControlName="apellidoP" id = "inputNombre" (input)="change($event,'apellidoP')">
+                                        <p *ngIf="noApellidoP;" class="caption status-danger">
+                                            Apellido Paterno requerido.
+                                        </p>
+    
+                                    </div>
+    
+                       
+                                    
+                                </div>
+    
+                                <div class="form-group row">
+                                    <div class="col-sm-12">
+                                        <input nbInput  placeholder="Apellido Materno" formControlName="apellidoM" id = "inputNombre" (input)="change($event,'apellidoM')">
+                                        <p *ngIf="noApellidoM;" class="caption status-danger">
+                                            Apellido Materno requerido.
+                                        </p>
+                                    </div>
+                                </div>
+                            
+                            <div style="text-align: center;">
+                                <button  nbButton status="info" (click)="next()">
+                                    Siguiente
+                                    <nb-icon icon="arrow-right-outline" pack="eva"></nb-icon>
+                                </button>
+                            </div>
+                                
+                            
+                            
+                            
+                                    
+                                    
+                                
+                                    
+                           
+    
+                        </form>
+    
+                        <form [formGroup]="secondFormGroup" *ngIf="nextForm" autocomplete="off">
+                            <label for="inputTelefono"  class="label">Teléfono*</label>
+                            <div class="input-box">
+                                <nb-icon style="margin-right: 3%;" icon="phone-outline" pack="eva">
+        
+                                </nb-icon>
+                                <input type="text" nbInput placeholder="+569 12345678" formControlName="telefono" id = "inputTelefono" (input)="change($event,'telefono')">
+                               
+                            </div>
+                            <p *ngIf="noTelefono;" class="caption status-danger">
+                                Teléfono requerido.
+                            </p>
+    
+                            <p *ngIf="!noTelefono && incorrectTelefono;" class="caption status-danger">
+                                Formato de teléfono incorrecto.
+                            </p>
+                            
+                            <div *ngIf="!noTelefono && !incorrectTelefono;">
+                                <br>
+                            </div>
+                            
+                            
+    
+                            <label for="inputMotivacion"  class="label">Motivación*</label>
+                            <textarea nbInput fullWidth placeholder="Motivación..." formControlName="motivacion" id="inputMotivacion" (input)="change($event,'motivacion')"></textarea>
+    
+                            <p *ngIf="noMotivacion;" class="caption status-danger">
+                                Motivacion requerida.
+                            </p>
+                            <div class="captcha">
+                                <ngx-recaptcha2 
+                                
+                                (success)="handleSuccess($event)"
+                                (expire)="handleExpire()"
+                                [siteKey]="siteKey"
+                                [size]="size"
+                                formControlName="recaptcha" >
+                                </ngx-recaptcha2>
+    
+                             
+                            </div>
+    
+                            
+                            <div style="text-align: center;">
+                                <button  nbButton status="info" (click)="prev()" style="margin-right: 2% !important;">
+                                    
+                                    <nb-icon icon="arrow-left-outline" pack="eva"></nb-icon>
+                                </button>
+    
+                                
+    
+                                <button  nbButton status="success" (click)="newSolicitud()">
+                                    <nb-icon icon="checkmark-outline" pack="eva"></nb-icon>
+                                    Enviar Solicitud
+                                    
+                                </button>
+    
+                                <ng-container *ngIf="!canPressButton;else other">
+                                    <p class="caption status-danger">
+                                        Debes completar la verificación.
+                                    </p>
+                                </ng-container>
+        
+                                
+                            </div>
+                            
+                            
+    
+                        </form>
+                    </nb-form-field>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    
+    </div>
+</ng-container>

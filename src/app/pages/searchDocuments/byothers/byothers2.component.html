@@ -1,0 +1,175 @@
+<div class="row">
+    <div class="col-xxl-12">
+
+        <nb-card>
+            <nb-card-header>Búsqueda de Documentos Fuentes otros filtros.</nb-card-header>
+            <nb-card-body>
+                <nb-form-field>
+                    <label for="inputNombre"  class="label">Selecciona el tipo de búsqueda</label>
+                    <nb-select id = "inputNombre" [(selected)]="selectedFiltro" (selectedChange)="filtroSeleccionado($event)">
+                                    
+                        <nb-option value="{{filtro.id}}" *ngFor="let filtro of filtros">{{filtro.texto}}</nb-option>
+
+                    </nb-select>
+
+                </nb-form-field>
+
+                <ng-container *ngIf="id_seleccionada == 1">
+                    <div class="buscadores1">
+                        <label for="inputPeriod"  class="label">Selecciona el período de búsqueda</label>
+                        <nb-select id="inputPeriod" [(selected)]="selectedPeriod" (selectedChange)="periodoSeleccionated($event)">
+                                    
+                            <nb-option value="{{periodo.id}}" *ngFor="let periodo of periodos">{{periodo.texto}}</nb-option>
+        
+                        </nb-select>
+                    </div>
+                        <div class="buscadores">
+                            
+                        <label for="orden"  class="label">Selecciona el tipo de orden</label>
+                            <nb-select id="orden" [(selected)]="selectedOrder" (selectedChange)="orderSelectionated($event)">
+                                        
+                                <nb-option value="{{order.id}}" *ngFor="let order of orders">{{order.texto}}</nb-option>
+            
+                            </nb-select>
+                        </div>
+    
+    
+                   
+                </ng-container>
+    
+                <ng-container *ngIf="id_seleccionada == 2">
+                    <div class="buscadores">
+                       <label for="orden2"  class="label">Selecciona el tipo de orden</label>
+                       <nb-select id="orden2" [(selected)]="selectedOrder2" (selectedChange)="orderSelectionated2($event)">
+                                   
+                           <nb-option value="{{order.id}}" *ngFor="let order of orders">{{order.texto}}</nb-option>
+       
+                       </nb-select>
+    
+                    </div>
+                   
+               </ng-container>
+    
+            </nb-card-body>
+
+
+
+        </nb-card>
+    </div>
+</div>
+
+<ng-container *ngIf="documentosEncontrados?.length>0">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-header>Documentos encontrados.</nb-card-header>
+                <nb-card-body>
+                    <nb-accordion>
+                        <nb-accordion-item #primaryItem *ngFor="let documento of documentosEncontrados | paginate: { itemsPerPage: 10, currentPage: p }; let i = index " >
+                            <nb-accordion-item-header (click)="openDocument(documento.id_documento)">
+                                <div class="titulo">
+                                    <h5>{{documento.nombre}}</h5>
+                                </div>
+                                <div class="aranya2" style="margin-left: 2%;">
+                                    <ng-container *ngIf="id_seleccionada == 1">
+                                        <button nbButton status="primary" shape="round" >
+                                            <nb-icon icon="search-outline" pack="eva">
+            
+                                            </nb-icon>
+
+                                            {{documento.n_busquedas}}
+                                            
+                                        </button>
+                                       <!-- 
+                                        <ng-container *ngIf="documento.n_busquedas > 1">
+                                            <button class="especial" nbButton ghost >
+                                                Buscado {{documento.n_busquedas}} veces.
+                                            </button>
+                                        </ng-container>
+
+                                        <ng-container *ngIf="documento.n_busquedas == 1">
+                                            <button class="especial" nbButton ghost >
+                                                Buscado {{documento.n_busquedas}} vez.
+                                            </button>
+                                        </ng-container>
+                                        
+                                        -->
+                                    </ng-container>
+
+                                    <ng-container *ngIf="id_seleccionada == 2">
+                                        <button nbButton status="primary" shape="round" >
+                                            <nb-icon icon="hash-outline" pack="eva">
+            
+                                            </nb-icon>
+                                            {{documento.n_indicadores}}
+                                        </button>
+                                        <!--
+                                        <ng-container *ngIf="documento.n_indicadores > 1">
+                                            <button class="especial" nbButton ghost >
+                                                {{documento.n_indicadores}} Indicadores aportados.
+                                            </button>
+                                        </ng-container>
+                                        
+                                        <ng-container *ngIf="documento.n_indicadores == 1">
+                                            <button class="especial" nbButton ghost >
+                                                {{documento.n_indicadores}} Indicador aportado.
+                                            </button>
+                                        </ng-container>
+                                        -->
+
+                                    </ng-container>
+
+                            </div>
+                            
+                        </nb-accordion-item-header>
+                        <nb-accordion-item-body >
+
+                            <h6>Categorias Aportadas</h6>
+
+                            <nb-list>
+                                <nb-list-item *ngFor="let categoria of categoria_aportada">
+                                    <nb-icon icon="checkmark-square-outline" pack="eva"></nb-icon>
+                                    {{categoria.nombre}}
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                           <h6> Servicios Fuentes</h6>
+
+                            <nb-list>
+                                    
+                                <nb-list-item *ngFor="let servicio of servicios_indicador">
+                                    <nb-icon icon="book-outline" pack="eva"></nb-icon>
+                                    {{servicio.institucion}}
+                                </nb-list-item>
+                            </nb-list>
+
+                            <div class="sameline">
+                                <h6>URL de obtención: &nbsp;</h6>  <a href="{{documento.url}}" target="_blank"> {{ documento.url}}</a> 
+                            </div>
+                            <br>
+                            <h6>Formatos del Documento</h6>
+                            <nb-list>
+                                <nb-list-item *ngFor="let formato of formatos_documento">
+                                    <nb-icon icon="pricetags-outline" pack="eva"></nb-icon>
+                                    .{{formato.formato}}
+                                </nb-list-item>
+                            </nb-list>
+                        </nb-accordion-item-body>
+                        
+                        </nb-accordion-item>   
+                    </nb-accordion>
+
+                    <ng-container *ngIf="documentosEncontrados?.length>10">
+                            
+                        <div class="paginacion">
+                            <pagination-controls (pageChange)="p=$event" nextLabel="Siguiente" previousLabel="Anterior"></pagination-controls>
+                        </div>
+                    
+                    
+                    </ng-container>
+
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</ng-container>

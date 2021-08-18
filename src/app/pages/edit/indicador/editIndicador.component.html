@@ -1,0 +1,188 @@
+<div class="row">
+    <div class="col-xxl-12">
+        <nb-card>
+            <nb-card-header>Buscar indicador para editar</nb-card-header>
+            <nb-card-body>
+                <nb-form-field>
+                    <input
+                    [ngModel]="value"
+                    (ngModelChange)="onModelChange($event)"
+                    nbInput
+                    type="text"
+                    placeholder="Busca un indicador por su nombre..."
+                    [nbAutocomplete]="autoNgModel" fullWidth id="indicador" autocomplete="off"/>
+
+                    <nb-autocomplete #autoNgModel (selectedChange)="valorSeleccionado($event)">
+                        <nb-option *ngFor="let option of filteredNgModelOptions$ | async" [value]="option">
+                            {{ option }}
+                          </nb-option>
+                    </nb-autocomplete>
+                
+
+                    
+                </nb-form-field>
+                <br>
+                
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>
+
+<ng-container *ngIf="seleccionado && indicador_encontrado?.length>0">
+    <div class="row">
+        <div class="col-xxl-12">
+            <nb-card>
+                <nb-card-header>Edición de indicador
+                    <ng-container *ngIf="admin">
+                        <button style="padding: 0%" nbButton ghost status="danger" (click)="deleteIndicador(indicador_encontrado[0].id_indicador)">
+                            <nb-icon icon="trash-2-outline" pack="eva">
+    
+                            </nb-icon>
+                            Eliminar indicador
+                        </button>
+                    </ng-container>
+                    
+                
+                </nb-card-header>
+    
+                <nb-card-body>
+                    <nb-form-field>
+                        <form [formGroup]="firstFormGroup" class="step-container" autocomplete="off">
+                            <p> <u>Nombre actual:</u>  <b> {{indicador_encontrado[0].nombre}}</b> </p> 
+                            <label for="inputNombre"  class="label">Nuevo nombre de indicador</label>
+                            <input type="text" nbInput fullWidth placeholder="Nuevo Nombre" formControlName="nombre" id = "inputNombre" (change)="changeName($event)" autocomplete="off">
+                            <br>
+                            <br>
+                            <p> <u>Categoria actual:</u>  <b> {{categoria_actual}}</b> </p> 
+                            
+                            <label for="categoria"  class="label">Nueva categoría del indicador</label>
+
+                            <nb-select fullWidth id="categoria" [(selected)]="selectedCategoria" placeholder="Nueva Categoría" formControlName="categoria" >
+                                
+                                <nb-option value="{{categoria.id_categoria}}" *ngFor="let categoria of categorias">{{categoria.nombre}}</nb-option>
+
+                            </nb-select>
+
+                            <br>
+                            <br>
+                            <p> <u>Documentos fuentes actuales:</u></p>
+                            <nb-list>
+                                <nb-list-item *ngFor="let documento of documentos">
+                                    <b>
+                                        <nb-icon icon="file-text-outline" pack="eva">
+                                                
+                                        </nb-icon>
+                                        {{documento.nombre}}
+                                    </b>
+                                    <ng-container *ngIf="documentos.length>=2 && admin" >
+                                        <button nbButton ghost status="danger" (click)="deleteDocumento(documento.id_documento, documento.nombre)">
+                                            <nb-icon icon="trash-2-outline" pack="eva">
+    
+                                            </nb-icon>
+                                        </button>
+                                    </ng-container>
+                                    
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                            <label for="documentoFuente" class="label">Nuevo Documento Fuente de obtención</label>
+                            
+                            <nb-list>
+                                <nb-list-item *ngFor="let documento_new of new_documentos">
+                                    
+                                        <nb-icon icon="file-text-outline" pack="eva">
+                                                
+                                        </nb-icon>
+                                        {{documento_new.nombre}}
+                                        <button nbButton ghost status="danger" (click)="deleteDocument(documento_new)">
+                                            <nb-icon icon="trash-2-outline" pack="eva">
+                    
+                                            </nb-icon>
+                                            
+                                        </button>
+                                    
+
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                            
+                            <input
+                            [ngModel]="value2"
+                            (ngModelChange)="onModelChange2($event)"
+                            nbInput
+                            type="text"
+                            placeholder="Busca un documento fuente por su nombre..."
+                            [nbAutocomplete]="autoNgModel2" id="documentoFuente" fullWidth  formControlName="documentoFuente2" autocomplete="off"/>
+
+                            <nb-autocomplete #autoNgModel2 (selectedChange)="valorSeleccionado2($event)">
+                                <nb-option *ngFor="let option of filteredNgModelOptions2$ | async" [value]="option">
+                                    {{ option }}
+                                </nb-option>
+                            </nb-autocomplete>
+
+
+                           
+                                <br>
+                                <br>
+                                
+                          
+                            
+
+                            <!--
+                            <nb-tag-list (tagRemove)="onTagRemove($event)">
+                                <nb-tag *ngFor="let documento_new of documentos_anyadidos" [text]="documento_new" [removable]="documentos_anyadidos.length >= 0"></nb-tag>
+                            </nb-tag-list>
+                            -->
+                            <p> <u>Archivos CSV actuales:</u></p>
+                            <nb-list>
+                                <nb-list-item *ngFor="let archivo of archivos">
+                                    <b>
+                                        <nb-icon icon="attach-outline" pack="eva">
+                                                
+                                        </nb-icon> {{archivo.nombre}}
+                                    </b>
+                                        <ng-container *ngIf="admin">
+                                            <button nbButton ghost status="danger" (click)="deleteCSV(archivo.id, archivo.nombre)">
+                                                <nb-icon icon="trash-2-outline" pack="eva">
+        
+                                                </nb-icon>
+                                            </button>
+                                        </ng-container>
+                                        
+                                    
+                                        
+                                    
+                                </nb-list-item>
+
+                                <nb-list-item>
+                                    <button nbButton status="success" (click)="openDialogAdd(indicador_encontrado)" shape="round" size="small">
+                                        <nb-icon icon="plus">
+        
+                                        </nb-icon>
+                                        
+                                    </button>
+                                    <div class="aranya">
+                                        <button nbButton ghost >
+                                            Nuevo Archivo
+                                        </button>
+                                    </div>
+                                    
+                                    
+                                </nb-list-item>
+                            </nb-list>
+                            <br>
+                            <button nbButton status="primary" (click)="registrarCambios()">
+                                <nb-icon icon="save-outline" pack="eva">
+
+                                </nb-icon>
+                                Registrar cambios
+                            </button>
+                            
+                        </form>
+                    </nb-form-field>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    
+    </div>
+</ng-container>

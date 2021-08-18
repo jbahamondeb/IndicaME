@@ -1,0 +1,150 @@
+@import '../../../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+
+
+@include nb-install-component() {
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    height: 50%;
+
+    .wrapper {
+      margin-top: 0%;
+      display: block
+
+    
+    }
+    .medio {
+    
+      width: 100%;
+      padding: 2%;
+      
+    }
+
+    nb-accordion{
+      z-index: 5;
+     
+      width: 30%;
+      height: 20%;
+      position: absolute;
+      top: 13%;
+      left: 50px;
+  
+  
+    }
+
+   
+
+  }
+
+  @media only screen and (max-width: 740px) {
+
+    nb-accordion-item-header{
+
+      font-size: 10px;
+  
+  
+    }
+
+    .coloreado span{
+      font-size: 10px;
+    }
+
+  }
+
+  @media only screen and (max-width: 410px) {
+    nb-accordion{
+    
+      width: 40%;
+    }
+    
+    
+
+  }
+
+  @media only screen and (max-width: 350px) {
+    nb-accordion-item-header{
+
+      font-size: 8px;
+  
+  
+    }
+
+    .coloreado span{
+      font-size: 8px;
+    }
+    
+    
+
+  }
+ 
+}
+
+
+/*
+.map{
+    height: 55vh;
+    width: 20vw;
+    background-color: nb-theme(background-basic-color-2);
+    
+  }
+  */
+
+  nb-accordion{
+    z-index: 5;
+   
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 25%;
+    left: 50px;
+
+
+  }
+
+
+.coloreado span{
+  padding: 5%;
+  font-size: large;
+}
+
+.seleccionarcategoria{
+    z-index: 2000;
+   
+    width: 20%;
+    position: absolute;
+    left: 10%;
+    top: 5%;
+}
+
+
+.map {
+  width: 100%;
+  height:400px;
+
+  background-color: nb-theme(background-basic-color-2);
+}
+.wrapper {
+  margin-top: 3%;
+  display: flex;
+
+}
+
+.medio {
+
+  width: 50%;
+  float: left;
+}
+
+.tercio {
+
+  width: 33.3%;
+  float: left;
+}
+
+::ng-deep .ol-zoom {
+  left: auto;
+  right: 8px !important
+}

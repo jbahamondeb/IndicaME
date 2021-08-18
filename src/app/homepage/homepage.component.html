@@ -1,0 +1,91 @@
+<nb-layout style="display: none"> 
+    <nb-layout-column> 
+
+    </nb-layout-column>
+
+</nb-layout>
+
+<div class="cuerpo">
+    <div class='some-page-wrapper'>
+        <div class='row'>
+          <div class='column'>
+            <div class='blue-column'>
+                <div class="center">
+                    <h1>
+                        Plataforma de administración de indicadores
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum nec orci dignissim dapibus. Nam a aliquam tellus. Cras pulvinar varius dolor efficitur ullamcorper. Duis quis sem hendrerit massa volutpat condimentum ac nec odio. In sodales est nisl, ut maximus nisi venenatis id. Sed non rhoncus magna, id lacinia mauris. Ut ullamcorper facilisis neque, ut aliquam augue gravida vitae. Ut ac accumsan mauris, ut mollis purus. Cras sit amet mauris massa. Vestibulum iaculis ante quis sagittis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+                        Curabitur convallis imperdiet molestie. 
+                    </p>
+
+                    <button nbButton status="primary" routerLink="/pages/dashboard">Ingresar a plataforma.</button>
+
+                    <div class="finPage">
+                        <button nbButton status="success"><a href="#down">Leer más</a><nb-icon icon="book"></nb-icon>
+                            
+                        </button>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+          </div>
+          <div class='column'>
+            <div class='green-column'>
+                <div class="center">
+                    <ng-container *ngFor="let img of img_list; let i = index">
+                        <div *ngIf="current == i" @fade>
+                            <h1>{{img.title}}</h1>
+                            <div class="imagenBorde">
+                                <img class="img" [src]="img.url">
+                            </div>
+                            
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    <!--
+    <div id='divElement'>
+        <ng-container *ngFor="let img of img_list; let i = index">
+            <div class="slider" *ngIf="current == i" @fade>
+                <img class="img" [src]="img">
+            </div>
+        </ng-container>
+    </div>
+    -->
+    <!--
+    <div class="container">
+        <div class="sliders">
+            
+        </div>
+    </div>
+    -->
+</div>
+
+
+<div class="leerMas" id="down">
+    <h1>¿En qué consiste el proyecto?</h1>
+    <div class="texto">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum nec orci dignissim dapibus. Nam a aliquam tellus. Cras pulvinar varius dolor efficitur ullamcorper. Duis quis sem hendrerit massa volutpat condimentum ac nec odio. In sodales est nisl, ut maximus nisi venenatis id. Sed non rhoncus magna, id lacinia mauris. Ut ullamcorper facilisis neque, ut aliquam augue gravida vitae. Ut ac accumsan mauris, ut mollis purus. Cras sit amet mauris massa. Vestibulum iaculis ante quis sagittis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    
+            Curabitur convallis imperdiet molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum nec orci dignissim dapibus. Nam a aliquam tellus. Cras pulvinar varius dolor efficitur ullamcorper. Duis quis sem hendrerit massa volutpat condimentum ac nec odio. In sodales est nisl, ut maximus nisi venenatis id. Sed non rhoncus magna, id lacinia mauris. Ut ullamcorper facilisis neque, ut aliquam augue gravida vitae. Ut ac accumsan mauris, ut mollis purus. Cras sit amet mauris massa. Vestibulum iaculis ante quis sagittis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    
+            Curabitur convallis imperdiet molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum nec orci dignissim dapibus. Nam a aliquam tellus. Cras pulvinar varius dolor efficitur ullamcorper. Duis quis sem hendrerit massa volutpat condimentum ac nec odio. In sodales est nisl, ut maximus nisi venenatis id. Sed non rhoncus magna, id lacinia mauris. Ut ullamcorper facilisis neque, ut aliquam augue gravida vitae. Ut ac accumsan mauris, ut mollis purus. Cras sit amet mauris massa. Vestibulum iaculis ante quis sagittis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    
+            Curabitur convallis imperdiet molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ipsum nec orci dignissim dapibus. Nam a aliquam tellus. Cras pulvinar varius dolor efficitur ullamcorper. Duis quis sem hendrerit massa volutpat condimentum ac nec odio. In sodales est nisl, ut maximus nisi venenatis id. Sed non rhoncus magna, id lacinia mauris. Ut ullamcorper facilisis neque, ut aliquam augue gravida vitae. Ut ac accumsan mauris, ut mollis purus. Cras sit amet mauris massa. Vestibulum iaculis ante quis sagittis aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+    
+            Curabitur convallis imperdiet molestie. 
+        </p>
+    </div>
+   
+</div>

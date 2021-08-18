@@ -1,0 +1,21 @@
+.aranya button{
+    cursor:alias !important;
+  }
+  
+  .aranya button:hover {
+    background-color: transparent !important;
+  }
+  
+  .swal-modal .swal-text {
+    text-align: center;
+  }
+  
+
+  .swal-modal .swal-text {
+    text-align: center !important;
+}
+
+::ng-deep .swal2-html-container{
+
+    margin: 0 auto;
+}
