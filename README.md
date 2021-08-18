@@ -146,7 +146,7 @@ npm start
 
 # Contacto
 
-En cas de cualquier duda y/o error, contactar con joaquinbah2016@udec.cl o joaquin.bahamonde.b@gmail.com.
+En caso de cualquier duda y/o error, contactar con joaquinbah2016@udec.cl o joaquin.bahamonde.b@gmail.com.
 
 
 
