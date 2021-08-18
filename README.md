@@ -101,14 +101,18 @@ user: admin, pass: geoserver.
 4. Seguir los siguientes pasos:
 
    1. Seleccionar Almacenes de datos
-![Paso 1](https://i.imgur.com/hP25gzG.png)
-   2. Seleccionar alguna de las capas descargadas, este procedimiento se debe realizar con ProvincialCoordenadas, RegionalCoordenadas y comunasCoordenadas.
-![Paso 2](https://i.imgur.com/Gu9rqcE.png)
-   3. Cambiar la ruta de acuerdo al repositorio en donde están sus archivos .shp descargados y guardar los cambios.
-![Paso 3](https://i.imgur.com/IZ4c0V0.png)
-   4. Cambiar parámetros de conexión en capa "database". Estos son de acuerdo a como se tiene configurado PostgreSQL.
-![Paso 4](https://i.imgur.com/6jczbt7.png)
-![Paso 5](https://i.imgur.com/Qwz2cVD.png)
+   
+      ![Paso 1](https://i.imgur.com/hP25gzG.png)
+   2. Seleccionar alguna de las capas descargadas, este procedimiento se debe realizar con ProvincialCoordenadas, RegionalCoordenadas y comunasCoordenadas.  
+   
+      ![Paso 2](https://i.imgur.com/Gu9rqcE.png)
+   3. Cambiar la ruta de acuerdo al repositorio en donde están sus archivos .shp descargados y guardar los cambios.  
+   
+      ![Paso 3](https://i.imgur.com/IZ4c0V0.png)
+   4. Cambiar parámetros de conexión en capa "database". Estos son de acuerdo a como se tiene configurado PostgreSQL.  
+   
+       ![Paso 4](https://i.imgur.com/6jczbt7.png)
+       ![Paso 5](https://i.imgur.com/Qwz2cVD.png)
 
 ## Puesta en marcha.
 
